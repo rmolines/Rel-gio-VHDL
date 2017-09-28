@@ -1,0 +1,19 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity MUX is
+  port (
+  clk : in std_logic;
+  sel : in std_logic;
+  a   : in std_logic_vector (7 downto 0);
+  b   : in std_logic_vector (7 downto 0);
+  saida : out std_logic_vector (7 downto 0)
+  );
+end entity;
+
+architecture MUX of MUX_arhc is
+begin
+  saida <= a WHEN (sel='0') ELSE
+           b;
+end architecture;
