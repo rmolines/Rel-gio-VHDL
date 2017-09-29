@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Relogio
-Sat Sep 23 19:08:39 2017
+Thu Sep 28 21:10:11 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -14,14 +14,20 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: registradorGenerico:regValue
- 10. Port Connectivity Checks: "MUX:MUX"
- 11. Port Connectivity Checks: "registradorGenerico:regValue"
- 12. Port Connectivity Checks: "ULA:COMP"
- 13. Port Connectivity Checks: "ULA:ULA"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: registradorGenerico:regS
+ 10. Parameter Settings for User Entity Instance: registradorGenerico:REG_M
+ 11. Port Connectivity Checks: "ULA:COMP_M"
+ 12. Port Connectivity Checks: "registradorGenerico:REG_M"
+ 13. Port Connectivity Checks: "MUX:MUX_0_M"
+ 14. Port Connectivity Checks: "ULA:ULA_M"
+ 15. Port Connectivity Checks: "MUX:MUX_60_S"
+ 16. Port Connectivity Checks: "MUX:MUX"
+ 17. Port Connectivity Checks: "registradorGenerico:regS"
+ 18. Port Connectivity Checks: "ULA:COMP"
+ 19. Port Connectivity Checks: "ULA:ULA"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -48,14 +54,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Sep 23 19:08:39 2017       ;
+; Analysis & Synthesis Status     ; Successful - Thu Sep 28 21:10:11 2017       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Relogio                                     ;
 ; Top-level Entity Name           ; Relogio                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 8                                           ;
-; Total pins                      ; 9                                           ;
+; Total registers                 ; 16                                          ;
+; Total pins                      ; 17                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -172,56 +178,60 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; MUX.vhd                          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/17.0/Relogio/MUX.vhd                 ;         ;
-; Relogio.vhd                      ; yes             ; User VHDL File  ; C:/intelFPGA_lite/17.0/Relogio/Relogio.vhd             ;         ;
-; ULA.vhd                          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/17.0/Relogio/ULA.vhd                 ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/17.0/Relogio/registradorGenerico.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+; MUX.vhd                          ; yes             ; User VHDL File  ; C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX.vhd                 ;         ;
+; Relogio.vhd                      ; yes             ; User VHDL File  ; C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd             ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/ULA.vhd                 ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/registradorGenerico.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-; Estimate of Logic utilization (ALMs needed) ; 9                ;
-;                                             ;                  ;
-; Combinational ALUT usage for logic          ; 17               ;
-;     -- 7 input functions                    ; 0                ;
-;     -- 6 input functions                    ; 1                ;
-;     -- 5 input functions                    ; 0                ;
-;     -- 4 input functions                    ; 0                ;
-;     -- <=3 input functions                  ; 16               ;
-;                                             ;                  ;
-; Dedicated logic registers                   ; 8                ;
-;                                             ;                  ;
-; I/O pins                                    ; 9                ;
-;                                             ;                  ;
-; Total DSP Blocks                            ; 0                ;
-;                                             ;                  ;
-; Maximum fan-out node                        ; MUX:MUX|Equal0~1 ;
-; Maximum fan-out                             ; 8                ;
-; Total fan-out                               ; 78               ;
-; Average fan-out                             ; 1.81             ;
-+---------------------------------------------+------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 17        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 33        ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 1         ;
+;     -- 5 input functions                    ; 1         ;
+;     -- 4 input functions                    ; 1         ;
+;     -- <=3 input functions                  ; 30        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 16        ;
+;                                             ;           ;
+; I/O pins                                    ; 17        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 16        ;
+; Total fan-out                               ; 155       ;
+; Average fan-out                             ; 1.87      ;
++---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                     ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name         ; Library Name ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------------+--------------+
-; |Relogio                          ; 17 (0)              ; 8 (0)                     ; 0                 ; 0          ; 9    ; 0            ; |Relogio                              ; Relogio             ; work         ;
-;    |MUX:MUX|                      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|MUX:MUX                      ; MUX                 ; work         ;
-;    |ULA:COMP|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|ULA:COMP                     ; ULA                 ; work         ;
-;    |ULA:ULA|                      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|ULA:ULA                      ; ULA                 ; work         ;
-;    |registradorGenerico:regValue| ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|registradorGenerico:regValue ; registradorGenerico ; work         ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name         ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+---------------------+--------------+
+; |Relogio                       ; 33 (0)              ; 16 (0)                    ; 0                 ; 0          ; 17   ; 0            ; |Relogio                           ; Relogio             ; work         ;
+;    |MUX:MUX_0_M|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|MUX:MUX_0_M               ; MUX                 ; work         ;
+;    |MUX:MUX_60_S|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|MUX:MUX_60_S              ; MUX                 ; work         ;
+;    |ULA:COMP_M|                ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|ULA:COMP_M                ; ULA                 ; work         ;
+;    |ULA:COMP|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|ULA:COMP                  ; ULA                 ; work         ;
+;    |ULA:ULA_M|                 ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|ULA:ULA_M                 ; ULA                 ; work         ;
+;    |ULA:ULA|                   ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|ULA:ULA                   ; ULA                 ; work         ;
+;    |registradorGenerico:REG_M| ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|registradorGenerico:REG_M ; registradorGenerico ; work         ;
+;    |registradorGenerico:regS|  ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|registradorGenerico:regS  ; registradorGenerico ; work         ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -230,8 +240,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8     ;
-; Number of registers using Synchronous Clear  ; 8     ;
+; Total registers                              ; 16    ;
+; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -240,14 +250,78 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registradorGenerico:regValue ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; larguradados   ; 8     ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:regS ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_M ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULA:COMP_M"                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[2..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[7..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; sel[1]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; sel[0]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_M" ;
++--------+-------+----------+---------------------------+
+; Port   ; Type  ; Severity ; Details                   ;
++--------+-------+----------+---------------------------+
+; enable ; Input ; Info     ; Stuck at VCC              ;
+; rst    ; Input ; Info     ; Stuck at GND              ;
++--------+-------+----------+---------------------------+
+
+
++-----------------------------------------+
+; Port Connectivity Checks: "MUX:MUX_0_M" ;
++------+-------+----------+---------------+
+; Port ; Type  ; Severity ; Details       ;
++------+-------+----------+---------------+
+; a    ; Input ; Info     ; Stuck at GND  ;
++------+-------+----------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULA:ULA_M"                                                                              ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; sel      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "MUX:MUX_60_S"  ;
++---------+-------+----------+--------------+
+; Port    ; Type  ; Severity ; Details      ;
++---------+-------+----------+--------------+
+; a[7..1] ; Input ; Info     ; Stuck at GND ;
+; a[0]    ; Input ; Info     ; Stuck at VCC ;
+; b       ; Input ; Info     ; Stuck at GND ;
++---------+-------+----------+--------------+
 
 
 +----------------------------------------+
@@ -259,14 +333,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "registradorGenerico:regValue" ;
-+--------+-------+----------+------------------------------+
-; Port   ; Type  ; Severity ; Details                      ;
-+--------+-------+----------+------------------------------+
-; enable ; Input ; Info     ; Stuck at VCC                 ;
-; rst    ; Input ; Info     ; Stuck at GND                 ;
-+--------+-------+----------+------------------------------+
++------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:regS" ;
++--------+-------+----------+--------------------------+
+; Port   ; Type  ; Severity ; Details                  ;
++--------+-------+----------+--------------------------+
+; enable ; Input ; Info     ; Stuck at VCC             ;
+; rst    ; Input ; Info     ; Stuck at GND             ;
++--------+-------+----------+--------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -274,9 +348,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
-; b[7..4]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; b[2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[7..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; b[1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; b[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; sel[1]   ; Input  ; Info     ; Stuck at GND                                                                        ;
@@ -302,18 +374,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 8                           ;
-;     SCLR              ; 8                           ;
-; arriav_lcell_comb     ; 17                          ;
-;     arith             ; 15                          ;
-;         1 data inputs ; 15                          ;
-;     normal            ; 2                           ;
+; arriav_ff             ; 16                          ;
+;     SCLR              ; 16                          ;
+; arriav_lcell_comb     ; 33                          ;
+;     arith             ; 29                          ;
+;         1 data inputs ; 27                          ;
+;         2 data inputs ; 2                           ;
+;     normal            ; 4                           ;
 ;         3 data inputs ; 1                           ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 1                           ;
 ;         6 data inputs ; 1                           ;
-; boundary_port         ; 9                           ;
+; boundary_port         ; 17                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.10                        ;
-; Average LUT depth     ; 2.08                        ;
+; Max LUT depth         ; 4.80                        ;
+; Average LUT depth     ; 3.25                        ;
 +-----------------------+-----------------------------+
 
 
@@ -332,46 +407,46 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Sep 23 19:08:28 2017
+    Info: Processing started: Thu Sep 28 21:10:01 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Relogio -c Relogio
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Warning (12090): Entity "MUX" obtained from "MUX.vhd" instead of from Quartus Prime megafunction library File: C:/intelFPGA_lite/17.0/Relogio/MUX.vhd Line: 5
+Warning (12090): Entity "MUX" obtained from "MUX.vhd" instead of from Quartus Prime megafunction library File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
-    Info (12022): Found design unit 1: MUX-MUX_ARCH File: C:/intelFPGA_lite/17.0/Relogio/MUX.vhd Line: 14
-    Info (12023): Found entity 1: MUX File: C:/intelFPGA_lite/17.0/Relogio/MUX.vhd Line: 5
+    Info (12022): Found design unit 1: MUX-MUX_ARCH File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX.vhd Line: 14
+    Info (12023): Found entity 1: MUX File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file relogio.vhd
-    Info (12022): Found design unit 1: Relogio-watch File: C:/intelFPGA_lite/17.0/Relogio/Relogio.vhd Line: 13
-    Info (12023): Found entity 1: Relogio File: C:/intelFPGA_lite/17.0/Relogio/Relogio.vhd Line: 5
+    Info (12022): Found design unit 1: Relogio-watch File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Info (12023): Found entity 1: Relogio File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: C:/intelFPGA_lite/17.0/Relogio/ULA.vhd Line: 14
-    Info (12023): Found entity 1: ULA File: C:/intelFPGA_lite/17.0/Relogio/ULA.vhd Line: 5
+    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/ULA.vhd Line: 14
+    Info (12023): Found entity 1: ULA File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/intelFPGA_lite/17.0/Relogio/registradorGenerico.vhd Line: 14
-    Info (12023): Found entity 1: registradorGenerico File: C:/intelFPGA_lite/17.0/Relogio/registradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/registradorGenerico.vhd Line: 14
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/registradorGenerico.vhd Line: 4
 Info (12021): Found 3 design units, including 1 entities, in source file divisorgenerico.vhd
-    Info (12022): Found design unit 1: divisorGenerico-divisaoPor2 File: C:/intelFPGA_lite/17.0/Relogio/divisorGenerico.vhd Line: 14
-    Info (12022): Found design unit 2: divisorGenerico-divisaoGenerica File: C:/intelFPGA_lite/17.0/Relogio/divisorGenerico.vhd Line: 27
-    Info (12023): Found entity 1: divisorGenerico File: C:/intelFPGA_lite/17.0/Relogio/divisorGenerico.vhd Line: 5
+    Info (12022): Found design unit 1: divisorGenerico-divisaoPor2 File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorGenerico.vhd Line: 14
+    Info (12022): Found design unit 2: divisorGenerico-divisaoGenerica File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorGenerico.vhd Line: 27
+    Info (12023): Found entity 1: divisorGenerico File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorGenerico.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-behaviour File: C:/intelFPGA_lite/17.0/Relogio/bancoRegistradores.vhd Line: 31
-    Info (12023): Found entity 1: bancoRegistradores File: C:/intelFPGA_lite/17.0/Relogio/bancoRegistradores.vhd Line: 6
+    Info (12022): Found design unit 1: bancoRegistradores-behaviour File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/bancoRegistradores.vhd Line: 31
+    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/bancoRegistradores.vhd Line: 6
 Info (12127): Elaborating entity "Relogio" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Relogio.vhd(18): object "CLK_IN" assigned a value but never read File: C:/intelFPGA_lite/17.0/Relogio/Relogio.vhd Line: 18
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/intelFPGA_lite/17.0/Relogio/Relogio.vhd Line: 28
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:regValue" File: C:/intelFPGA_lite/17.0/Relogio/Relogio.vhd Line: 30
-Info (12128): Elaborating entity "MUX" for hierarchy "MUX:MUX" File: C:/intelFPGA_lite/17.0/Relogio/Relogio.vhd Line: 31
+Warning (10036): Verilog HDL or VHDL warning at Relogio.vhd(28): object "CLK_IN" assigned a value but never read File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 28
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 42
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:regS" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 44
+Info (12128): Elaborating entity "MUX" for hierarchy "MUX:MUX" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 45
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 66 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 25 logic cells
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 49 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 740 megabytes
-    Info: Processing ended: Sat Sep 23 19:08:39 2017
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 739 megabytes
+    Info: Processing ended: Thu Sep 28 21:10:11 2017
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
 
 
