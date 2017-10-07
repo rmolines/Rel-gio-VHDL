@@ -1,0 +1,23 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity ULA_R is
+    Port ( A:  in std_logic_vector(7 downto 0);
+           B:  in std_logic_vector(7 downto 0);
+           Sel_ALU: in std_logic_vector(1 downto 0);
+           Y_ALU: out std_logic_vector(7 downto 0);
+   );
+end entity;
+
+architecture comp_ULA of ULA_R is
+
+begin
+  process (A, B, Sel_ALU) is
+  begin
+    case Sel_ALU is
+      when "00" => Y_ALU <= A+B;
+      when others => (others => '0');
+    end case;
+  end process;
+end architecture;

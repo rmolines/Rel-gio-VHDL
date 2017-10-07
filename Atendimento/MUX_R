@@ -1,0 +1,36 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity MUX_R is
+  port (
+  SEL_MUX: in std_logic_vector  (2 downto 0);
+  A0: in std_logic_vector  (3 downto 0);
+  B0: in std_logic_vector  (3 downto 0);
+  A1: in std_logic_vector  (3 downto 0);
+  B1: in std_logic_vector  (3 downto 0);
+  A2: in std_logic_vector  (3 downto 0);
+  B2: in std_logic_vector  (3 downto 0);
+  Y_MUX: out std_logic_vector (4 downto 0);
+  );
+end entity;
+
+architecture comp_MUX of MUX_R is
+begin
+if (SEL_MUX ='000') then
+	Y_MUX<=A0;
+
+elsif (SEL_MUX ='001') then
+	Y_MUX<=B0;
+
+elsif (SEL_MUX ='010') then
+  Y_MUX<=A1;
+
+elsif (SEL_MUX ='100') then
+  Y_MUX<=B1;
+elsif (SEL_MUX ='110') then
+  Y_MUX<=A2;
+else
+	  Y_MUX<=B2;
+end if;
+end architecture;
