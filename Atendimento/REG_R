@@ -1,0 +1,22 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity REG_R is
+    Port ( CLK,RST,ENABLE:  in std_logic;
+           A: in std_logic_vector  (3 downto 0);
+           Y_REG: out std_logic_vector (3 downto 0);
+   );
+end entity;
+
+architecture comp_REG of REG_R is
+begin
+  process (CLK) is
+  begin
+    if RISING_EDGE (CLK) then
+      if (RST='1')
+        Y_ALU<=(others => '0');
+      elif (ENABLE='1')
+        Y_REG<=A;
+  end process;
+end architecture;

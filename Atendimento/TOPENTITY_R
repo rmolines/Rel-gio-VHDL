@@ -1,0 +1,37 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity FD is
+    Port ( A:  in std_logic_vector(7 downto 0);
+           B:  in std_logic_vector(7 downto 0);
+           C:  in std_logic_vector(7 downto 0);
+           D:  in std_logic_vector(7 downto 0);
+           E:  in std_logic_vector(7 downto 0);
+           F:  in std_logic_vector(7 downto 0);
+           CLK,RST,ENABLE: in std_logic;
+           Y: out std_logic_vector(7 downto 0);
+           SEL: in std_logic_vector(2 downto 0);
+   );
+end entity;
+
+architecture comp_FD of FD is
+SIGNAL OUTMUX : std_logic_vector(3 downto 0);
+SIGNAL A0 : std_logic_vector(3 downto 0);
+SIGNAL B0 : std_logic_vector(3 downto 0);
+SIGNAL A1 : std_logic_vector(3 downto 0);
+SIGNAL B1 : std_logic_vector(3 downto 0);
+SIGNAL A2 : std_logic_vector(3 downto 0);
+SIGNAL B2 : std_logic_vector(3 downto 0);
+begin
+  ALU1:entity work.ULA_R Port map (A => OUTMUX, B => '1', Y_ALU => Y, SEL_ALU => SEL);
+  MUX1:entity work.MUX_R Port map (A => A0, B => B0,C=>A1, D=>B1, E=>A2, F=>B2, Y_MUX => OUTMUX, SEL_MUX => SEL);
+  REGH0:entity work.REG_R Port map(CLK => CLK,RST=>RST,ENABLE=>ENABLE, Y_REG => A0);
+  REGH1:entity work.REG_R Port map(CLK => CLK,RST=>RST,ENABLE=>ENABLE, Y_REG => B0);
+  REGM0:entity work.REG_R Port map(CLK => CLK,RST=>RST,ENABLE=>ENABLE, Y_REG => A1);
+  REGM1:entity work.REG_R Port map(CLK => CLK,RST=>RST,ENABLE=>ENABLE, Y_REG => B1);
+  REGS0:entity work.REG_R Port map(CLK => CLK,RST=>RST,ENABLE=>ENABLE, Y_REG => A2);
+  REGS1:entity work.REG_R Port map(CLK => CLK,RST=>RST,ENABLE=>ENABLE, Y_REG => B2);
+
+
+end architecture;
