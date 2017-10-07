@@ -2,55 +2,71 @@ library IEEE;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity Relogio is
-  Port (
-    clk : in std_logic;
-    segundos: out std_logic_vector (7 downto 0);
-    minutos:  out std_logic_vector (7 downto 0)
+entity relogio is
+  port (
+    -- Entradas (placa)
+    CLOCK_50 : in STD_LOGIC;
+	 KEY: in STD_LOGIC_VECTOR(3 DOWNTO 0);
+
+
+    -- Saidas (placa)
+    HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0);
+	 TESTE : OUT STD_LOGIC_VECTOR (3 downto 0);
+   muxteste : out std_logic_vector (2 downto 0);
+   enbteste : out std_logic_vector (5 downto 0);
+   rstteste : out std_logic_vector (5 downto 0)
   );
 end entity;
 
+architecture comportamento of relogio is
 
-architecture watch of Relogio is
-  signal ULA_S_IN_A, ULA_S_IN_B, ULA_S_OUT : std_logic_vector (7 downto 0);
-  signal COMP_OUT : std_logic_vector (7 downto 0);
-  signal MUX_S_IN_A, MUX_S_OUT : std_logic_vector (7 downto 0);
-  signal SECONDS, MINUTES : std_logic_vector (7 downto 0);
+  signal auxSum, auxSsec_u, auxSsec_d, auxSmin_u, auxSmin_d, auxSh_d, auxSh_u : std_logic_vector (3 downto 0);
+  signal auxSel : std_logic_vector (2 downto 0);
+  signal auxEnable, auxRst : std_logic_vector (5 downto 0);
+  signal auxClock, auxReset : std_logic;
 
-  signal ZERO_SIG : std_logic_vector (7 downto 0);
-  signal ONE_SIG : std_logic_vector (7 downto 0);
+  begin
 
-  signal ULA_M_IN_A, ULA_M_IN_B, ULA_M_OUT : std_logic_vector (7 downto 0);
-  signal MUX_M_IN_A, MUX_M_IN_B, MUX_M_OUT : std_logic_vector (7 downto 0);
-  signal COMP_M_OUT : std_logic_vector (7 downto 0);
-
-
-  signal CLK_IN, CLK_OUT : std_logic;
-
-begin
-  CLK_IN <= clk;
-  ULA_S_IN_B <= x"01";
-  SECONDS <= std_logic_vector(to_unsigned(2, 8));
-  MINUTES <= std_logic_vector(to_unsigned(6, 8));
+    auxReset <= not(KEY(0));
+	 TESTE <= auxSsec_u;
+   muxteste <= auxSel;
+   enbteste <= auxEnable;
+   rstteste <= auxRst;
 
 
-  ZERO_SIG <= std_logic_vector(to_unsigned(0, 8));
-  ONE_SIG <= std_logic_vector(to_unsigned(1, 8));
+    -- Instancia o fluxo de dados mais simples:
+    FD : entity work.fluxo
+      Port map (clk => auxClock, sel => auxSel, ssec_d => auxSsec_d, ssec_u => auxSsec_u, smin_d => auxSmin_d,
+                smin_u => auxSmin_u, sh_d => auxSh_d, sh_u => auxSh_u, enable => auxEnable, rst => auxRst,
+                sum => auxSum);
 
---  divG      : entity work.divisorGenerico (divisaoGenerica)  generic map (divisor => 1) --(divisaoGenerica) := 2^divisor
---                port map (clk => CLK_IN, saida_clk => CLK_OUT);
-  ULA       : entity work.ULA Port map (A => ULA_S_IN_A, B => ULA_S_IN_B, C => ULA_S_OUT, sel => "00");
-  COMP      : entity work.ULA port map (A => ULA_S_IN_A, B => SECONDS, C => COMP_OUT, sel => "01");
-  regS		  : entity work.registradorGenerico port map (DIN => MUX_S_OUT, DOUT => ULA_S_IN_A, CLK => clk, ENABLE => '1', RST => '0');
-  MUX       : entity work.MUX port map (A => ZERO_SIG, B => ULA_S_OUT, SEL => COMP_OUT, C => MUX_S_OUT);
+    -- horas:
+    display0 : entity work.conversorHex7seg
+      Port map (saida7seg => HEX0, dadoHex => auxSsec_u);
+    display1 : entity work.conversorHex7seg
+      Port map (saida7seg => HEX1, dadoHex => auxSsec_d);
+    display2 : entity work.conversorHex7seg
+      Port map (saida7seg => HEX2, dadoHex => auxSmin_u);
+    display3 : entity work.conversorHex7seg
+      Port map (saida7seg => HEX3, dadoHex => auxSmin_d);
+    display4 : entity work.conversorHex7seg
+      Port map (saida7seg => HEX4, dadoHex => auxSh_u);
+    display5 : entity work.conversorHex7seg
+      Port map (saida7seg => HEX5, dadoHex => auxSh_d);
 
-  MUX_60_S  : entity work.MUX port map (A => ONE_SIG, B => ZERO_SIG, SEL => COMP_OUT, C => ULA_M_IN_B);
-  ULA_M     : entity work.ULA port map (A => ULA_M_IN_A, B => ULA_M_IN_B, C => ULA_M_OUT, sel => "00");
-  MUX_0_M   : entity work.MUX port map (A => ZERO_SIG, B => ULA_M_OUT, SEL => COMP_M_OUT, C => MUX_M_OUT);
-  REG_M     : entity work.registradorGenerico port map (DIN => MUX_M_OUT, DOUT => ULA_M_IN_A, CLK => clk, ENABLE => '1', RST => '0');
-  COMP_M    : entity work.ULA port map (A => ULA_M_IN_A, B => MINUTES, C => COMP_M_OUT, sel => "01");
 
-  segundos <= ULA_S_OUT;
-  minutos <= ULA_M_OUT;
 
+    -- Instacia a maquina de estados:
+    relogio : entity work.SM1
+      port map( clock => auxClock,
+        ent => auxSum, mux => auxSel, enable => auxEnable,
+        rst => auxRst
+      );
+
+
+	 --Displays e Leds:
+	 freq : entity work.divisorGenerico (divisaoGenerica)  generic map (divisor => 25) --(divisaoGenerica) := 2^divisor
+	  port map (clk =>  CLOCK_50, saida_clk => auxClock);
+
+	 --auxClock <= CLOCK_50;
 end architecture;
