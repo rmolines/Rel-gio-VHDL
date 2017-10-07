@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Sep 28 21:10:11 2017
+Analysis & Synthesis Status : Successful - Sat Oct 07 19:31:15 2017
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : Relogio
-Top-level Entity Name : Relogio
+Top-level Entity Name : relogio
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 16
-Total pins : 17
+Total registers : 57
+Total pins : 80
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

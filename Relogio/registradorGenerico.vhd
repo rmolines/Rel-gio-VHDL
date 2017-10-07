@@ -6,7 +6,7 @@ use IEEE.STD_LOGIC_1164.ALL;
         larguraDados : natural := 8
     );
       port (DIN : in    std_logic_vector(larguraDados-1 downto 0);
-           DOUT : out   std_logic_vector(larguraDados-1 downto 0);
+           DOUT : out   std_logic_vector(larguraDados-1 downto 0) := "0000";
            ENABLE : in  std_logic;
            CLK,RST : in std_logic);
  end entity;

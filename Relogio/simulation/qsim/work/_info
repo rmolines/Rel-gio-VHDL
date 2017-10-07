@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/17.0/Relogio/simulation/qsim
 Erelogio
-Z0 w1506643866
+Z0 w1507415316
 Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 cD3@N^MdoDolN5@R6?T[V1
 Z2 DPx8 cyclonev 19 cyclonev_components 0 22 3BCIeZzdIHLCX<;R;K38G3
 Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 PQDYM9fR]Wek<A7X8bA8S1
@@ -24,13 +24,13 @@ Z11 8Relogio.vho
 Z12 FRelogio.vho
 l0
 L39
-Vi@lb4aShY@o4Fhk>U4ClY2
-!s100 [7n>6KYH@PHFP[l52bQWo3
+V;:LZD>TM[e0kR?0nN<adT1
+!s100 N?5BKPBfY9Z`chzK9FY9a1
 Z13 OV;C;10.5b;63
 32
-Z14 !s110 1506643867
+Z14 !s110 1507415320
 !i10b 1
-Z15 !s108 1506643866.000000
+Z15 !s108 1507415319.000000
 Z16 !s90 -work|work|Relogio.vho|
 Z17 !s107 Relogio.vho|
 !i113 1
@@ -46,11 +46,11 @@ R6
 R7
 R8
 R9
-DEx4 work 7 relogio 0 22 i@lb4aShY@o4Fhk>U4ClY2
-l172
-L67
-V?^UOO5OA191;XOl]J7[852
-!s100 1V89HhE[EgllVfc@NGFdU1
+DEx4 work 7 relogio 0 22 ;:LZD>TM[e0kR?0nN<adT1
+l297
+L141
+V0^4S_kiY6L4_DCB[Wl43L2
+!s100 ^]Z:PVVkzja4?OJ7A9kg[0
 R13
 32
 R14
@@ -62,34 +62,34 @@ R17
 R18
 R19
 Erelogio_vhd_vec_tst
-Z20 w1506643864
+Z20 w1507415315
 R7
 R8
 R10
-Z21 8Waveform5.vwf.vht
-Z22 FWaveform5.vwf.vht
+Z21 8Waveform6.vwf.vht
+Z22 FWaveform6.vwf.vht
 l0
 L32
-VODR^0<49@mV9D?EZ1g_Lb3
-!s100 D2:bEbobeS_eGa>4]a1dE3
+V<gOk6D1VGJQD`F=bE@c>A1
+!s100 ZiVeX1cEfACR]F<OXaF`>0
 R13
 32
 R14
 !i10b 1
-Z23 !s108 1506643867.000000
-Z24 !s90 -work|work|Waveform5.vwf.vht|
-Z25 !s107 Waveform5.vwf.vht|
+Z23 !s108 1507415320.000000
+Z24 !s90 -work|work|Waveform6.vwf.vht|
+Z25 !s107 Waveform6.vwf.vht|
 !i113 1
 R18
 R19
 Arelogio_arch
 R7
 R8
-Z26 DEx4 work 19 relogio_vhd_vec_tst 0 22 ODR^0<49@mV9D?EZ1g_Lb3
-l47
+Z26 DEx4 work 19 relogio_vhd_vec_tst 0 22 <gOk6D1VGJQD`F=bE@c>A1
+l69
 L34
-Z27 VX[8^UNYT5NZ1<K?Mf93Nz1
-Z28 !s100 fgzd][mC2P7H]REeE7Yld3
+Z27 VMUVDog=Naf]O^z6P9md0d1
+Z28 !s100 keMj;=GP^fibza0NdHWDY0
 R13
 32
 R14
