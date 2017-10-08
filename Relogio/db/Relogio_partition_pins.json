@@ -172,83 +172,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "TESTE[0]",
-					"strict" : false
-				},
-				{
-					"name" : "TESTE[1]",
-					"strict" : false
-				},
-				{
-					"name" : "TESTE[2]",
-					"strict" : false
-				},
-				{
-					"name" : "TESTE[3]",
-					"strict" : false
-				},
-				{
-					"name" : "muxteste[0]",
-					"strict" : false
-				},
-				{
-					"name" : "muxteste[1]",
-					"strict" : false
-				},
-				{
-					"name" : "muxteste[2]",
-					"strict" : false
-				},
-				{
-					"name" : "enbteste[0]",
-					"strict" : false
-				},
-				{
-					"name" : "enbteste[1]",
-					"strict" : false
-				},
-				{
-					"name" : "enbteste[2]",
-					"strict" : false
-				},
-				{
-					"name" : "enbteste[3]",
-					"strict" : false
-				},
-				{
-					"name" : "enbteste[4]",
-					"strict" : false
-				},
-				{
-					"name" : "enbteste[5]",
-					"strict" : false
-				},
-				{
-					"name" : "rstteste[0]",
-					"strict" : false
-				},
-				{
-					"name" : "rstteste[1]",
-					"strict" : false
-				},
-				{
-					"name" : "rstteste[2]",
-					"strict" : false
-				},
-				{
-					"name" : "rstteste[3]",
-					"strict" : false
-				},
-				{
-					"name" : "rstteste[4]",
-					"strict" : false
-				},
-				{
-					"name" : "rstteste[5]",
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
 					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[2]",
 					"strict" : false
 				}
 			]

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Relogio
-Sun Oct 08 16:31:03 2017
+Sun Oct  8 18:13:13 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,28 +13,31 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |relogio|SM1:relogio|fstate
-  9. User-Specified and Inferred Latches
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_SEC_U
- 13. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_SEC_D
- 14. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_MIN_U
- 15. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_MIN_D
- 16. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_H_U
- 17. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_H_D
- 18. Parameter Settings for User Entity Instance: divisorGenerico:freq
- 19. Port Connectivity Checks: "SM1:relogio"
- 20. Port Connectivity Checks: "conversorHex7Seg:display5"
- 21. Port Connectivity Checks: "conversorHex7Seg:display4"
- 22. Port Connectivity Checks: "conversorHex7Seg:display3"
- 23. Port Connectivity Checks: "conversorHex7Seg:display2"
- 24. Port Connectivity Checks: "conversorHex7Seg:display1"
- 25. Port Connectivity Checks: "conversorHex7Seg:display0"
- 26. Port Connectivity Checks: "fluxo:FD|ULA:ULA"
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+  8. State Machine - |relogio|AjusteSM:ajuste|fstate
+  9. State Machine - |relogio|SM1:relogio|fstate
+ 10. User-Specified and Inferred Latches
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_SEC_U
+ 14. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_SEC_D
+ 15. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_MIN_U
+ 16. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_MIN_D
+ 17. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_H_U
+ 18. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_H_D
+ 19. Parameter Settings for User Entity Instance: divisorGenerico:freq
+ 20. Port Connectivity Checks: "ModoSM:modo"
+ 21. Port Connectivity Checks: "AjusteSM:ajuste"
+ 22. Port Connectivity Checks: "SM1:relogio"
+ 23. Port Connectivity Checks: "conversorHex7Seg:display5"
+ 24. Port Connectivity Checks: "conversorHex7Seg:display4"
+ 25. Port Connectivity Checks: "conversorHex7Seg:display3"
+ 26. Port Connectivity Checks: "conversorHex7Seg:display2"
+ 27. Port Connectivity Checks: "conversorHex7Seg:display1"
+ 28. Port Connectivity Checks: "conversorHex7Seg:display0"
+ 29. Port Connectivity Checks: "fluxo:FD|ULA:ULA"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
 
 
 
@@ -61,16 +64,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 08 16:31:03 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct  8 18:13:13 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Relogio                                     ;
 ; Top-level Entity Name              ; relogio                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 141                                         ;
-;     Total combinational functions  ; 141                                         ;
-;     Dedicated logic registers      ; 57                                          ;
-; Total registers                    ; 57                                          ;
-; Total pins                         ; 80                                          ;
+; Total logic elements               ; 168                                         ;
+;     Total combinational functions  ; 167                                         ;
+;     Dedicated logic registers      ; 66                                          ;
+; Total registers                    ; 66                                          ;
+; Total pins                         ; 98                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -177,25 +180,26 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
-; Relogio.vhd                      ; yes             ; User VHDL File  ; C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd             ;         ;
-; fluxo.vhd                        ; yes             ; User VHDL File  ; C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd               ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/conversorHex7Seg.vhd    ;         ;
-; MUX6.vhd                         ; yes             ; User VHDL File  ; C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd                ;         ;
-; SM1.vhd                          ; yes             ; User VHDL File  ; C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd                 ;         ;
-; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/ULA.vhd                 ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/registradorGenerico.vhd ;         ;
-; divisorGenerico.vhd              ; yes             ; User VHDL File  ; C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorGenerico.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
+; ModoSM.vhd                       ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd              ;         ;
+; AjusteSM.vhd                     ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AjusteSM.vhd            ;         ;
+; Relogio.vhd                      ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd             ;         ;
+; fluxo.vhd                        ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd               ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/conversorHex7Seg.vhd    ;         ;
+; MUX6.vhd                         ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd                ;         ;
+; SM1.vhd                          ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd                 ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ULA.vhd                 ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/registradorGenerico.vhd ;         ;
+; divisorGenerico.vhd              ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorGenerico.vhd     ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------+
@@ -203,29 +207,29 @@ agreement for further details.
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Estimated Total logic elements              ; 141                          ;
+; Estimated Total logic elements              ; 168                          ;
 ;                                             ;                              ;
-; Total combinational functions               ; 141                          ;
+; Total combinational functions               ; 167                          ;
 ; Logic element usage by number of LUT inputs ;                              ;
-;     -- 4 input functions                    ; 81                           ;
-;     -- 3 input functions                    ; 14                           ;
-;     -- <=2 input functions                  ; 46                           ;
+;     -- 4 input functions                    ; 115                          ;
+;     -- 3 input functions                    ; 21                           ;
+;     -- <=2 input functions                  ; 31                           ;
 ;                                             ;                              ;
 ; Logic elements by mode                      ;                              ;
-;     -- normal mode                          ; 117                          ;
+;     -- normal mode                          ; 143                          ;
 ;     -- arithmetic mode                      ; 24                           ;
 ;                                             ;                              ;
-; Total registers                             ; 57                           ;
-;     -- Dedicated logic registers            ; 57                           ;
+; Total registers                             ; 66                           ;
+;     -- Dedicated logic registers            ; 66                           ;
 ;     -- I/O registers                        ; 0                            ;
 ;                                             ;                              ;
-; I/O pins                                    ; 80                           ;
+; I/O pins                                    ; 98                           ;
 ;                                             ;                              ;
 ; Embedded Multiplier 9-bit elements          ; 0                            ;
 ;                                             ;                              ;
 ; Maximum fan-out node                        ; divisorGenerico:freq|cnt[25] ;
-; Maximum fan-out                             ; 32                           ;
-; Total fan-out                               ; 735                          ;
+; Maximum fan-out                             ; 41                           ;
+; Total fan-out                               ; 879                          ;
 ; Average fan-out                             ; 2.05                         ;
 +---------------------------------------------+------------------------------+
 
@@ -235,8 +239,10 @@ agreement for further details.
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                             ; Entity Name         ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+---------------------+--------------+
-; |relogio                              ; 141 (0)             ; 57 (0)                    ; 0           ; 0            ; 0       ; 0         ; 80   ; 0            ; |relogio                                        ; SM1                 ; work         ;
-;    |SM1:relogio|                      ; 23 (23)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|SM1:relogio                            ; SM1                 ; work         ;
+; |relogio                              ; 167 (0)             ; 66 (0)                    ; 0           ; 0            ; 0       ; 0         ; 98   ; 0            ; |relogio                                        ; SM1                 ; work         ;
+;    |AjusteSM:ajuste|                  ; 23 (23)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|AjusteSM:ajuste                        ; AjusteSM            ; work         ;
+;    |ModoSM:modo|                      ; 10 (10)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|ModoSM:modo                            ; ModoSM              ; work         ;
+;    |SM1:relogio|                      ; 12 (12)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|SM1:relogio                            ; SM1                 ; work         ;
 ;    |conversorHex7Seg:display0|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display0              ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:display1|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display1              ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:display2|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display2              ; conversorHex7Seg    ; work         ;
@@ -244,17 +250,34 @@ agreement for further details.
 ;    |conversorHex7Seg:display4|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display4              ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:display5|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display5              ; conversorHex7Seg    ; work         ;
 ;    |divisorGenerico:freq|             ; 26 (26)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:freq                   ; divisorGenerico     ; work         ;
-;    |fluxo:FD|                         ; 50 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD                               ; fluxo               ; work         ;
+;    |fluxo:FD|                         ; 54 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD                               ; fluxo               ; work         ;
 ;       |MUX6:MUX6|                     ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|MUX6:MUX6                     ; MUX6                ; work         ;
-;       |ULA:ULA|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|ULA:ULA                       ; ULA                 ; work         ;
+;       |ULA:ULA|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|ULA:ULA                       ; ULA                 ; work         ;
 ;       |registradorGenerico:REG_H_D|   ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_H_D   ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG_H_U|   ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_H_U   ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_H_U|   ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_H_U   ; registradorGenerico ; work         ;
 ;       |registradorGenerico:REG_MIN_D| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_MIN_D ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG_MIN_U| ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_MIN_U ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_MIN_U| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_MIN_U ; registradorGenerico ; work         ;
 ;       |registradorGenerico:REG_SEC_D| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_SEC_D ; registradorGenerico ; work         ;
 ;       |registradorGenerico:REG_SEC_U| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_SEC_U ; registradorGenerico ; work         ;
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |relogio|AjusteSM:ajuste|fstate                                                                                               ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state1 ; fstate.state7 ; fstate.state6 ; fstate.state5 ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.stateD ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; fstate.stateD ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state3 ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state4 ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 1             ;
+; fstate.state5 ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state6 ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state7 ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state1 ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
 
 
 Encoding Type:  One-Hot
@@ -292,7 +315,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 57    ;
+; Total registers                              ; 66    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -307,13 +330,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_SEC_U|DOUT[1] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_SEC_D|DOUT[3] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_MIN_U|DOUT[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_SEC_U|DOUT[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_SEC_D|DOUT[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_MIN_U|DOUT[3] ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_MIN_D|DOUT[3] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_H_U|DOUT[0]   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_H_D|DOUT[1]   ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |relogio|fluxo:FD|MUX6:MUX6|SAIDA[3]                    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_H_U|DOUT[3]   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_H_D|DOUT[3]   ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |relogio|fluxo:FD|MUX6:MUX6|SAIDA[1]                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
@@ -385,6 +408,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; divisor        ; 25    ; Signed Integer                           ;
 +----------------+-------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------+
+; Port Connectivity Checks: "ModoSM:modo" ;
++-------+-------+----------+--------------+
+; Port  ; Type  ; Severity ; Details      ;
++-------+-------+----------+--------------+
+; reset ; Input ; Info     ; Stuck at GND ;
++-------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "AjusteSM:ajuste" ;
++-------+-------+----------+------------------+
+; Port  ; Type  ; Severity ; Details          ;
++-------+-------+----------+------------------+
+; reset ; Input ; Info     ; Stuck at GND     ;
++-------+-------+----------+------------------+
 
 
 +-----------------------------------------+
@@ -473,23 +514,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 80                          ;
-; cycloneiii_ff         ; 57                          ;
+; boundary_port         ; 98                          ;
+; cycloneiii_ff         ; 66                          ;
 ;     ENA               ; 24                          ;
-;     plain             ; 33                          ;
-; cycloneiii_lcell_comb ; 149                         ;
+;     plain             ; 42                          ;
+; cycloneiii_lcell_comb ; 174                         ;
 ;     arith             ; 24                          ;
 ;         2 data inputs ; 23                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 125                         ;
+;     normal            ; 150                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 21                          ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 81                          ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 115                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.41                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 2.74                        ;
 +-----------------------+-----------------------------+
 
 
@@ -508,92 +549,137 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Oct 08 16:30:53 2017
+    Info: Processing started: Sun Oct  8 18:13:03 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Relogio -c Relogio
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file relogio.vhd
-    Info (12022): Found design unit 1: relogio-comportamento File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 21
-    Info (12023): Found entity 1: relogio File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ModoSM.vhd
+    Info (12022): Found design unit 1: ModoSM-BEHAVIOR File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 39
+    Info (12023): Found entity 1: ModoSM File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file AjusteSM.vhd
+    Info (12022): Found design unit 1: AjusteSM-BEHAVIOR File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AjusteSM.vhd Line: 34
+    Info (12023): Found entity 1: AjusteSM File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AjusteSM.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file Relogio.vhd
+    Info (12022): Found design unit 1: relogio-comportamento File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 22
+    Info (12023): Found entity 1: relogio File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fluxo.vhd
-    Info (12022): Found design unit 1: fluxo-behaviour File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 22
-    Info (12023): Found entity 1: fluxo File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/conversorHex7Seg.vhd Line: 16
-    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/conversorHex7Seg.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file mux6.vhd
-    Info (12022): Found design unit 1: MUX6-MUX_ARCH File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 18
-    Info (12023): Found entity 1: MUX6 File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file sm1.vhd
-    Info (12022): Found design unit 1: SM1-BEHAVIOR File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd Line: 33
-    Info (12023): Found entity 1: SM1 File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd Line: 22
-Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/ULA.vhd Line: 14
-    Info (12023): Found entity 1: ULA File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/ULA.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/registradorGenerico.vhd Line: 14
-    Info (12023): Found entity 1: registradorGenerico File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/registradorGenerico.vhd Line: 4
-Info (12021): Found 3 design units, including 1 entities, in source file divisorgenerico.vhd
-    Info (12022): Found design unit 1: divisorGenerico-divisaoPor2 File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorGenerico.vhd Line: 14
-    Info (12022): Found design unit 2: divisorGenerico-divisaoGenerica File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorGenerico.vhd Line: 27
-    Info (12023): Found entity 1: divisorGenerico File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorGenerico.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-behaviour File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/bancoRegistradores.vhd Line: 31
-    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/bancoRegistradores.vhd Line: 6
+    Info (12022): Found design unit 1: fluxo-behaviour File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 22
+    Info (12023): Found entity 1: fluxo File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/conversorHex7Seg.vhd Line: 16
+    Info (12023): Found entity 1: conversorHex7Seg File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file MUX6.vhd
+    Info (12022): Found design unit 1: MUX6-MUX_ARCH File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 18
+    Info (12023): Found entity 1: MUX6 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file SM1.vhd
+    Info (12022): Found design unit 1: SM1-BEHAVIOR File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd Line: 33
+    Info (12023): Found entity 1: SM1 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
+    Info (12022): Found design unit 1: ULA-comportamento File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ULA.vhd Line: 14
+    Info (12023): Found entity 1: ULA File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ULA.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/registradorGenerico.vhd Line: 14
+    Info (12023): Found entity 1: registradorGenerico File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/registradorGenerico.vhd Line: 4
+Info (12021): Found 3 design units, including 1 entities, in source file divisorGenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divisaoPor2 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorGenerico.vhd Line: 14
+    Info (12022): Found design unit 2: divisorGenerico-divisaoGenerica File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorGenerico.vhd Line: 27
+    Info (12023): Found entity 1: divisorGenerico File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradores.vhd
+    Info (12022): Found design unit 1: bancoRegistradores-behaviour File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/bancoRegistradores.vhd Line: 31
+    Info (12023): Found entity 1: bancoRegistradores File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/bancoRegistradores.vhd Line: 6
 Info (12127): Elaborating entity "Relogio" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Relogio.vhd(13): used implicit default value for signal "HEX6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at Relogio.vhd(13): used implicit default value for signal "HEX7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-Warning (10036): Verilog HDL or VHDL warning at Relogio.vhd(26): object "auxReset" assigned a value but never read File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 26
-Info (12128): Elaborating entity "fluxo" for hierarchy "fluxo:FD" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 38
-Info (12128): Elaborating entity "MUX6" for hierarchy "fluxo:FD|MUX6:MUX6" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 40
-Info (10041): Inferred latch for "SAIDA[0]" at MUX6.vhd(20) File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-Info (10041): Inferred latch for "SAIDA[1]" at MUX6.vhd(20) File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-Info (10041): Inferred latch for "SAIDA[2]" at MUX6.vhd(20) File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-Info (10041): Inferred latch for "SAIDA[3]" at MUX6.vhd(20) File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-Info (12128): Elaborating entity "ULA" for hierarchy "fluxo:FD|ULA:ULA" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 42
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "fluxo:FD|registradorGenerico:REG_SEC_U" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 44
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:display0" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 44
-Info (12128): Elaborating entity "SM1" for hierarchy "SM1:relogio" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 60
-Info (12129): Elaborating entity "divisorGenerico" using architecture "A:divisaogenerica" for hierarchy "divisorGenerico:freq" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 68
-Warning (13012): Latch fluxo:FD|MUX6:MUX6|SAIDA[2] has unsafe behavior File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SM1:relogio|WideOr5 File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd Line: 56
-Warning (13012): Latch fluxo:FD|MUX6:MUX6|SAIDA[0] has unsafe behavior File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SM1:relogio|WideOr5 File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd Line: 56
-Warning (13012): Latch fluxo:FD|MUX6:MUX6|SAIDA[1] has unsafe behavior File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SM1:relogio|WideOr5 File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd Line: 56
-Warning (13012): Latch fluxo:FD|MUX6:MUX6|SAIDA[3] has unsafe behavior File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SM1:relogio|WideOr5 File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd Line: 56
+Warning (10541): VHDL Signal Declaration warning at Relogio.vhd(14): used implicit default value for signal "HEX6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+Warning (10541): VHDL Signal Declaration warning at Relogio.vhd(14): used implicit default value for signal "HEX7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+Warning (10541): VHDL Signal Declaration warning at Relogio.vhd(15): used implicit default value for signal "TESTE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 15
+Warning (10541): VHDL Signal Declaration warning at Relogio.vhd(16): used implicit default value for signal "muxteste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 16
+Warning (10541): VHDL Signal Declaration warning at Relogio.vhd(17): used implicit default value for signal "enbteste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 17
+Warning (10541): VHDL Signal Declaration warning at Relogio.vhd(18): used implicit default value for signal "rstteste" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 18
+Warning (10036): Verilog HDL or VHDL warning at Relogio.vhd(27): object "auxReset" assigned a value but never read File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 27
+Info (12128): Elaborating entity "fluxo" for hierarchy "fluxo:FD" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 35
+Info (12128): Elaborating entity "MUX6" for hierarchy "fluxo:FD|MUX6:MUX6" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 40
+Info (10041): Inferred latch for "SAIDA[0]" at MUX6.vhd(20) File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+Info (10041): Inferred latch for "SAIDA[1]" at MUX6.vhd(20) File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+Info (10041): Inferred latch for "SAIDA[2]" at MUX6.vhd(20) File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+Info (10041): Inferred latch for "SAIDA[3]" at MUX6.vhd(20) File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+Info (12128): Elaborating entity "ULA" for hierarchy "fluxo:FD|ULA:ULA" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 42
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "fluxo:FD|registradorGenerico:REG_SEC_U" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 44
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:display0" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 41
+Info (12128): Elaborating entity "SM1" for hierarchy "SM1:relogio" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 57
+Info (12128): Elaborating entity "AjusteSM" for hierarchy "AjusteSM:ajuste" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 64
+Info (12128): Elaborating entity "ModoSM" for hierarchy "ModoSM:modo" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 71
+Info (12129): Elaborating entity "divisorGenerico" using architecture "A:divisaogenerica" for hierarchy "divisorGenerico:freq" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 81
+Warning (13012): Latch fluxo:FD|MUX6:MUX6|SAIDA[2] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ModoSM:modo|fstate File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 41
+Warning (13012): Latch fluxo:FD|MUX6:MUX6|SAIDA[0] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ModoSM:modo|fstate File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 41
+Warning (13012): Latch fluxo:FD|MUX6:MUX6|SAIDA[1] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ModoSM:modo|fstate File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 41
+Warning (13012): Latch fluxo:FD|MUX6:MUX6|SAIDA[3] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ModoSM:modo|fstate File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 41
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX6[0]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX6[1]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX6[2]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX6[3]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX6[4]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX6[5]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX6[6]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX7[0]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX7[1]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX7[2]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX7[3]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX7[4]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
-    Warning (13410): Pin "HEX7[6]" is stuck at GND File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 13
+    Warning (13410): Pin "HEX6[0]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX6[1]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX6[2]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX6[3]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX6[4]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX6[5]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX6[6]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX7[0]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX7[1]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX7[2]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX7[3]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX7[4]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX7[5]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "HEX7[6]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
+    Warning (13410): Pin "TESTE[0]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 15
+    Warning (13410): Pin "TESTE[1]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 15
+    Warning (13410): Pin "TESTE[2]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 15
+    Warning (13410): Pin "TESTE[3]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 15
+    Warning (13410): Pin "muxteste[0]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 16
+    Warning (13410): Pin "muxteste[1]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 16
+    Warning (13410): Pin "muxteste[2]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 16
+    Warning (13410): Pin "enbteste[0]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 17
+    Warning (13410): Pin "enbteste[1]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 17
+    Warning (13410): Pin "enbteste[2]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 17
+    Warning (13410): Pin "enbteste[3]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 17
+    Warning (13410): Pin "enbteste[4]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 17
+    Warning (13410): Pin "enbteste[5]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 17
+    Warning (13410): Pin "rstteste[0]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 18
+    Warning (13410): Pin "rstteste[1]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 18
+    Warning (13410): Pin "rstteste[2]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 18
+    Warning (13410): Pin "rstteste[3]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 18
+    Warning (13410): Pin "rstteste[4]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 18
+    Warning (13410): Pin "rstteste[5]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 9
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 9
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 9
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Rafael/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 9
-Info (21057): Implemented 221 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
+Warning (21074): Design contains 18 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[10]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[11]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[12]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[13]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[14]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[15]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[16]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[17]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+Info (21057): Implemented 266 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
     Info (21059): Implemented 75 output pins
-    Info (21061): Implemented 141 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 692 megabytes
-    Info: Processing ended: Sun Oct 08 16:31:03 2017
+    Info (21061): Implemented 168 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
+    Info: Peak virtual memory: 1000 megabytes
+    Info: Processing ended: Sun Oct  8 18:13:13 2017
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:25
 
 

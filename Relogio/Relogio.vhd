@@ -7,6 +7,7 @@ entity relogio is
     -- Entradas (placa)
     CLOCK_50 : in STD_LOGIC;
 	 KEY: in STD_LOGIC_VECTOR(3 DOWNTO 0);
+   SW: in STD_LOGIC_VECTOR(17 DOWNTO 0);
 
 
     -- Saidas (placa)
@@ -21,23 +22,19 @@ end entity;
 architecture comportamento of relogio is
 
   signal auxSum, auxSsec_u, auxSsec_d, auxSmin_u, auxSmin_d, auxSh_d, auxSh_u : std_logic_vector (3 downto 0);
-  signal auxSel : std_logic_vector (2 downto 0);
-  signal auxEnable, auxRst : std_logic_vector (5 downto 0);
+  signal ajusteSel, relSel, modoSel : std_logic_vector (2 downto 0);
+  signal ajusteEnable, relEnable, modoEnable, ajusteRst, relRst, modoRst : std_logic_vector (5 downto 0);
   signal auxClock, auxReset : std_logic;
 
   begin
 
-    auxReset <= not(KEY(0));
-	 TESTE <= auxSsec_u;
-   muxteste <= auxSel;
-   enbteste <= auxEnable;
-   rstteste <= auxRst;
+    auxReset <= not(KEY(3));
 
 
     -- Instancia o fluxo de dados mais simples:
     FD : entity work.fluxo
-      Port map (clk => auxClock, sel => auxSel, ssec_d => auxSsec_d, ssec_u => auxSsec_u, smin_d => auxSmin_d,
-                smin_u => auxSmin_u, sh_d => auxSh_d, sh_u => auxSh_u, enable => auxEnable, rst => auxRst,
+      Port map (clk => auxClock, sel => modoSel, ssec_d => auxSsec_d, ssec_u => auxSsec_u, smin_d => auxSmin_d,
+                smin_u => auxSmin_u, sh_d => auxSh_d, sh_u => auxSh_u, enable => modoEnable, rst => modoRst,
                 sum => auxSum);
 
     -- horas:
@@ -59,9 +56,25 @@ architecture comportamento of relogio is
     -- Instacia a maquina de estados:
     relogio : entity work.SM1
       port map( clock => auxClock,
-        ent => auxSum, mux => auxSel, enable => auxEnable,
-        rst => auxRst
+        ent => auxSum, mux => relSel, enable => relEnable,
+        rst => relRst
       );
+
+	 -- Instacia a maquina de estados:
+    ajuste : entity work.AjusteSM
+      port map( clock => auxClock,
+        ent => auxSum, mux => ajusteSel, enable => ajusteEnable,
+        rst => ajusteRst, botao => KEY(2 downto 0)
+      );
+
+    -- Instacia a maquina de estados:
+     modo : entity work.ModoSM
+       port map( clock => auxClock,
+         muxout => modoSel, enableout => modoEnable,
+         rstout => modoRst, ajuste => SW(0), relEnable => relEnable,
+         relRst => relRst, relMux => relSel, ajusteMux => ajusteSel,
+         ajusteRst => ajusteRst, ajusteEnable => ajusteEnable
+       );
 
 
 	 --Displays e Leds:
