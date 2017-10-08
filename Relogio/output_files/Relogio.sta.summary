@@ -2,180 +2,136 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'SM1:relogio|fstate.state3'
-Slack : -5.556
-TNS   : -18.514
+Type  : Slow 1200mV 85C Model Setup 'SM1:relogio|fstate.state3'
+Slack : -4.828
+TNS   : -17.895
 
-Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -4.060
-TNS   : -42.149
+Type  : Slow 1200mV 85C Model Setup 'divisorGenerico:freq|cnt[25]'
+Slack : -4.557
+TNS   : -73.593
 
-Type  : Slow 1100mV 85C Model Setup 'divisorGenerico:freq|cnt[25]'
-Slack : -2.982
-TNS   : -80.719
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -2.324
+TNS   : -35.181
 
-Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.440
+Type  : Slow 1200mV 85C Model Hold 'divisorGenerico:freq|cnt[25]'
+Slack : 0.403
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'divisorGenerico:freq|cnt[25]'
-Slack : 0.679
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.407
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'SM1:relogio|fstate.state3'
-Slack : 1.015
+Type  : Slow 1200mV 85C Model Hold 'SM1:relogio|fstate.state3'
+Slack : 1.115
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Recovery 'divisorGenerico:freq|cnt[25]'
-Slack : -1.675
-TNS   : -35.462
-
-Type  : Slow 1100mV 85C Model Removal 'divisorGenerico:freq|cnt[25]'
-Slack : 0.802
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
-Slack : -0.538
-TNS   : -24.956
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.538
-TNS   : -20.602
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'SM1:relogio|fstate.state3'
-Slack : 0.187
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Setup 'SM1:relogio|fstate.state3'
-Slack : -5.550
-TNS   : -18.213
-
-Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -3.977
-TNS   : -45.036
-
-Type  : Slow 1100mV 0C Model Setup 'divisorGenerico:freq|cnt[25]'
-Slack : -3.058
-TNS   : -82.857
-
-Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.443
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'divisorGenerico:freq|cnt[25]'
-Slack : 0.673
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'SM1:relogio|fstate.state3'
-Slack : 0.871
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Recovery 'divisorGenerico:freq|cnt[25]'
-Slack : -1.651
-TNS   : -33.710
-
-Type  : Slow 1100mV 0C Model Removal 'divisorGenerico:freq|cnt[25]'
-Slack : 0.704
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
-Slack : -0.538
-TNS   : -24.718
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.538
-TNS   : -21.112
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'SM1:relogio|fstate.state3'
-Slack : 0.211
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.879
-TNS   : -10.523
-
-Type  : Fast 1100mV 85C Model Setup 'SM1:relogio|fstate.state3'
-Slack : -2.847
-TNS   : -9.247
-
-Type  : Fast 1100mV 85C Model Setup 'divisorGenerico:freq|cnt[25]'
+Type  : Slow 1200mV 85C Model Recovery 'divisorGenerico:freq|cnt[25]'
 Slack : -1.334
-TNS   : -34.654
+TNS   : -12.960
 
-Type  : Fast 1100mV 85C Model Hold 'divisorGenerico:freq|cnt[25]'
-Slack : 0.179
+Type  : Slow 1200mV 85C Model Removal 'divisorGenerico:freq|cnt[25]'
+Slack : 0.580
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.186
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -36.410
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
+Slack : -1.285
+TNS   : -39.835
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SM1:relogio|fstate.state3'
+Slack : 0.460
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'SM1:relogio|fstate.state3'
-Slack : 0.340
+Type  : Slow 1200mV 0C Model Setup 'SM1:relogio|fstate.state3'
+Slack : -4.478
+TNS   : -16.551
+
+Type  : Slow 1200mV 0C Model Setup 'divisorGenerico:freq|cnt[25]'
+Slack : -3.946
+TNS   : -63.786
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.952
+TNS   : -28.863
+
+Type  : Slow 1200mV 0C Model Hold 'divisorGenerico:freq|cnt[25]'
+Slack : 0.354
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Recovery 'divisorGenerico:freq|cnt[25]'
-Slack : -0.976
-TNS   : -14.095
-
-Type  : Fast 1100mV 85C Model Removal 'divisorGenerico:freq|cnt[25]'
-Slack : 0.254
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.365
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.409
-TNS   : -2.484
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
-Slack : 0.026
+Type  : Slow 1200mV 0C Model Hold 'SM1:relogio|fstate.state3'
+Slack : 1.056
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'SM1:relogio|fstate.state3'
-Slack : 0.363
+Type  : Slow 1200mV 0C Model Recovery 'divisorGenerico:freq|cnt[25]'
+Slack : -1.118
+TNS   : -10.826
+
+Type  : Slow 1200mV 0C Model Removal 'divisorGenerico:freq|cnt[25]'
+Slack : 0.564
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'SM1:relogio|fstate.state3'
-Slack : -2.552
-TNS   : -8.263
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -36.410
 
-Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.407
-TNS   : -9.382
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
+Slack : -1.285
+TNS   : -39.835
 
-Type  : Fast 1100mV 0C Model Setup 'divisorGenerico:freq|cnt[25]'
-Slack : -1.171
-TNS   : -29.945
-
-Type  : Fast 1100mV 0C Model Hold 'divisorGenerico:freq|cnt[25]'
-Slack : 0.158
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SM1:relogio|fstate.state3'
+Slack : 0.447
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.177
+Type  : Fast 1200mV 0C Model Setup 'divisorGenerico:freq|cnt[25]'
+Slack : -1.966
+TNS   : -23.668
+
+Type  : Fast 1200mV 0C Model Setup 'SM1:relogio|fstate.state3'
+Slack : -1.841
+TNS   : -6.703
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.658
+TNS   : -5.062
+
+Type  : Fast 1200mV 0C Model Hold 'divisorGenerico:freq|cnt[25]'
+Slack : 0.148
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'SM1:relogio|fstate.state3'
-Slack : 0.249
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.188
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Recovery 'divisorGenerico:freq|cnt[25]'
-Slack : -0.824
-TNS   : -11.183
-
-Type  : Fast 1100mV 0C Model Removal 'divisorGenerico:freq|cnt[25]'
-Slack : 0.138
+Type  : Fast 1200mV 0C Model Hold 'SM1:relogio|fstate.state3'
+Slack : 0.248
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.390
-TNS   : -2.460
+Type  : Fast 1200mV 0C Model Recovery 'divisorGenerico:freq|cnt[25]'
+Slack : -0.617
+TNS   : -2.468
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
-Slack : 0.055
+Type  : Fast 1200mV 0C Model Removal 'divisorGenerico:freq|cnt[25]'
+Slack : 0.113
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'SM1:relogio|fstate.state3'
-Slack : 0.387
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -30.783
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
+Slack : -1.000
+TNS   : -31.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SM1:relogio|fstate.state3'
+Slack : 0.432
 TNS   : 0.000
 
 ------------------------------------------------------------
