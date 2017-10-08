@@ -2,112 +2,112 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'SM1:relogio|fstate.state3'
-Slack : -4.822
-TNS   : -18.539
+Type  : Slow 1200mV 85C Model Setup 'divisorGenerico:freq|cnt[25]'
+Slack : -3.950
+TNS   : -74.233
 
-Type  : Slow 1200mV 85C Model Setup 'divisorGenerico:freq|cnt[24]'
-Slack : -3.953
-TNS   : -78.916
+Type  : Slow 1200mV 85C Model Setup 'SM1:relogio|fstate.state3'
+Slack : -3.899
+TNS   : -14.872
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -2.309
-TNS   : -33.761
+Slack : -2.320
+TNS   : -35.542
 
-Type  : Slow 1200mV 85C Model Hold 'divisorGenerico:freq|cnt[24]'
-Slack : 0.404
+Type  : Slow 1200mV 85C Model Hold 'divisorGenerico:freq|cnt[25]'
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.406
+Slack : 0.407
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'SM1:relogio|fstate.state3'
-Slack : 0.871
+Slack : 1.211
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -35.125
+TNS   : -36.410
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[24]'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
 Slack : -1.285
 TNS   : -39.835
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SM1:relogio|fstate.state3'
-Slack : 0.431
+Slack : 0.426
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'SM1:relogio|fstate.state3'
-Slack : -4.600
-TNS   : -17.680
+Slack : -3.703
+TNS   : -14.068
 
-Type  : Slow 1200mV 0C Model Setup 'divisorGenerico:freq|cnt[24]'
-Slack : -3.544
-TNS   : -69.097
+Type  : Slow 1200mV 0C Model Setup 'divisorGenerico:freq|cnt[25]'
+Slack : -3.488
+TNS   : -64.371
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -1.967
-TNS   : -27.717
+Slack : -1.948
+TNS   : -29.171
 
-Type  : Slow 1200mV 0C Model Hold 'divisorGenerico:freq|cnt[24]'
+Type  : Slow 1200mV 0C Model Hold 'divisorGenerico:freq|cnt[25]'
 Slack : 0.355
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.364
+Slack : 0.365
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'SM1:relogio|fstate.state3'
-Slack : 0.858
+Slack : 1.069
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -35.125
+TNS   : -36.410
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[24]'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
 Slack : -1.285
 TNS   : -39.835
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SM1:relogio|fstate.state3'
-Slack : 0.399
+Slack : 0.397
 TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'divisorGenerico:freq|cnt[25]'
+Slack : -1.491
+TNS   : -23.474
 
 Type  : Fast 1200mV 0C Model Setup 'SM1:relogio|fstate.state3'
-Slack : -1.871
-TNS   : -7.009
-
-Type  : Fast 1200mV 0C Model Setup 'divisorGenerico:freq|cnt[24]'
-Slack : -1.535
-TNS   : -26.523
+Slack : -1.317
+TNS   : -5.030
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.815
-TNS   : -4.971
+Slack : -0.712
+TNS   : -5.249
 
-Type  : Fast 1200mV 0C Model Hold 'SM1:relogio|fstate.state3'
-Slack : 0.124
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'divisorGenerico:freq|cnt[24]'
-Slack : 0.182
+Type  : Fast 1200mV 0C Model Hold 'divisorGenerico:freq|cnt[25]'
+Slack : 0.060
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
 Slack : 0.188
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Hold 'SM1:relogio|fstate.state3'
+Slack : 0.254
+TNS   : 0.000
+
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -29.670
+TNS   : -30.766
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[24]'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
 Slack : -1.000
 TNS   : -31.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SM1:relogio|fstate.state3'
-Slack : 0.429
+Slack : 0.433
 TNS   : 0.000
 
 ------------------------------------------------------------

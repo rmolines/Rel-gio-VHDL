@@ -66,7 +66,7 @@ architecture comportamento of relogio is
 
 	 --Displays e Leds:
 	 freq : entity work.divisorGenerico (divisaoGenerica)  generic map (divisor => 25) --(divisaoGenerica) := 2^divisor
-	  port map (clk =>  CLOCK_50, saida_clk => auxClock)
+	  port map (clk =>  CLOCK_50, saida_clk => auxClock);
 
 
 	 --auxClock <= CLOCK_50;
