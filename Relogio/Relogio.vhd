@@ -11,11 +11,9 @@ entity relogio is
 
 
     -- Saidas (placa)
-    HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0);
-	 TESTE : OUT STD_LOGIC_VECTOR (3 downto 0);
-   muxteste : out std_logic_vector (2 downto 0);
-   enbteste : out std_logic_vector (5 downto 0);
-   rstteste : out std_logic_vector (5 downto 0)
+    LEDR  : out STD_LOGIC_VECTOR(17 DOWNTO 0) := (others => '0');
+    LEDG  : out STD_LOGIC_VECTOR(8 DOWNTO 0) := (others => '0');
+    HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0)
   );
 end entity;
 
@@ -24,7 +22,7 @@ architecture comportamento of relogio is
   signal auxSum, auxSsec_u, auxSsec_d, auxSmin_u, auxSmin_d, auxSh_d, auxSh_u : std_logic_vector (3 downto 0);
   signal ajusteSel, relSel, modoSel : std_logic_vector (2 downto 0);
   signal ajusteEnable, relEnable, modoEnable, ajusteRst, relRst, modoRst : std_logic_vector (5 downto 0);
-  signal auxClock, auxReset : std_logic;
+  signal auxClock, auxReset, ajusteClock, clockOut, relClock : std_logic;
 
   begin
 
@@ -33,7 +31,7 @@ architecture comportamento of relogio is
 
     -- Instancia o fluxo de dados mais simples:
     FD : entity work.fluxo
-      Port map (clk => auxClock, sel => modoSel, ssec_d => auxSsec_d, ssec_u => auxSsec_u, smin_d => auxSmin_d,
+      Port map (clk => clockOut, sel => modoSel, ssec_d => auxSsec_d, ssec_u => auxSsec_u, smin_d => auxSmin_d,
                 smin_u => auxSmin_u, sh_d => auxSh_d, sh_u => auxSh_u, enable => modoEnable, rst => modoRst,
                 sum => auxSum);
 
@@ -55,32 +53,36 @@ architecture comportamento of relogio is
 
     -- Instacia a maquina de estados:
     relogio : entity work.SM1
-      port map( clock => auxClock,
+      port map( clock => relClock,
         ent => auxSum, mux => relSel, enable => relEnable,
         rst => relRst
       );
 
 	 -- Instacia a maquina de estados:
     ajuste : entity work.AjusteSM
-      port map( clock => auxClock,
+      port map( clock => clockOut,
         ent => auxSum, mux => ajusteSel, enable => ajusteEnable,
-        rst => ajusteRst, botao => KEY(2 downto 0)
+        rst => ajusteRst, botao => not(KEY(2 downto 0))
       );
 
     -- Instacia a maquina de estados:
      modo : entity work.ModoSM
-       port map( clock => auxClock,
+       port map( clock => relClock, ajusteClock => ajusteClock,
+         clockOut => clockOut, relClock => relClock,
          muxout => modoSel, enableout => modoEnable,
          rstout => modoRst, ajuste => SW(0), relEnable => relEnable,
          relRst => relRst, relMux => relSel, ajusteMux => ajusteSel,
          ajusteRst => ajusteRst, ajusteEnable => ajusteEnable
        );
 
-
+   LEDG(3 downto 0) <= not(KEY(3 downto 0));      -- Cada LED VERDE, de 0 a 3, indica se o botao correspondente foi pressionado.
+   LEDR(7 downto 0) <= SW(7 downto 0);
 	 --Displays e Leds:
 	 freq : entity work.divisorGenerico (divisaoGenerica)  generic map (divisor => 25) --(divisaoGenerica) := 2^divisor
-	  port map (clk =>  CLOCK_50, saida_clk => auxClock);
-
+	 port map (clk =>  CLOCK_50, saida_clk => relClock);
+   --Displays e Leds:
+	 freq2 : entity work.divisorGenerico (divisaoGenerica)  generic map (divisor => 22) --(divisaoGenerica) := 2^divisor
+	 port map (clk =>  CLOCK_50, saida_clk => ajusteClock);
 
 	 --auxClock <= CLOCK_50;
 end architecture;
