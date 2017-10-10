@@ -3,147 +3,255 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'AjusteSM:ajuste|fstate.state3'
-Slack : -6.970
-TNS   : -26.406
-
-Type  : Slow 1200mV 85C Model Setup 'divisorGenerico:freq2|cnt[20]'
-Slack : -3.968
-TNS   : -86.410
+Slack : -5.835
+TNS   : -22.932
 
 Type  : Slow 1200mV 85C Model Setup 'divisorGenerico:freq|cnt[25]'
-Slack : -3.700
-TNS   : -95.665
+Slack : -4.825
+TNS   : -193.403
+
+Type  : Slow 1200mV 85C Model Setup 'divisorGenerico:freq2|cnt[22]'
+Slack : -4.761
+TNS   : -155.104
+
+Type  : Slow 1200mV 85C Model Setup 'AjusteSM:ajuste_alarme|fstate.state3'
+Slack : -4.246
+TNS   : -16.454
+
+Type  : Slow 1200mV 85C Model Setup 'CronoSM:cronometro|fstate.state3'
+Slack : -3.704
+TNS   : -13.969
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -2.428
-TNS   : -38.768
+Slack : -2.526
+TNS   : -45.363
 
-Type  : Slow 1200mV 85C Model Hold 'divisorGenerico:freq|cnt[25]'
-Slack : 0.068
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'divisorGenerico:freq2|cnt[20]'
+Type  : Slow 1200mV 85C Model Setup 'divisorGenerico:freq3|cnt[24]'
 Slack : 0.210
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.408
+Type  : Slow 1200mV 85C Model Hold 'AjusteSM:ajuste|fstate.state3'
+Slack : 0.258
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'AjusteSM:ajuste|fstate.state3'
-Slack : 0.458
+Type  : Slow 1200mV 85C Model Hold 'divisorGenerico:freq|cnt[25]'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'divisorGenerico:freq2|cnt[22]'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.407
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'divisorGenerico:freq3|cnt[24]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CronoSM:cronometro|fstate.state3'
+Slack : 0.511
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'AjusteSM:ajuste_alarme|fstate.state3'
+Slack : 1.108
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -37.695
+TNS   : -38.980
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
 Slack : -1.285
-TNS   : -51.400
+TNS   : -87.380
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisorGenerico:freq2|cnt[20]'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisorGenerico:freq2|cnt[22]'
 Slack : -1.285
-TNS   : -41.120
+TNS   : -79.670
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisorGenerico:freq3|cnt[24]'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CronoSM:cronometro|fstate.state3'
+Slack : 0.411
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'AjusteSM:ajuste|fstate.state3'
-Slack : 0.460
+Slack : 0.427
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'AjusteSM:ajuste_alarme|fstate.state3'
+Slack : 0.428
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'AjusteSM:ajuste|fstate.state3'
-Slack : -6.456
-TNS   : -24.561
-
-Type  : Slow 1200mV 0C Model Setup 'divisorGenerico:freq2|cnt[20]'
-Slack : -3.625
-TNS   : -79.085
+Slack : -5.333
+TNS   : -21.086
 
 Type  : Slow 1200mV 0C Model Setup 'divisorGenerico:freq|cnt[25]'
-Slack : -3.336
-TNS   : -85.471
+Slack : -4.217
+TNS   : -168.375
+
+Type  : Slow 1200mV 0C Model Setup 'divisorGenerico:freq2|cnt[22]'
+Slack : -4.126
+TNS   : -134.710
+
+Type  : Slow 1200mV 0C Model Setup 'AjusteSM:ajuste_alarme|fstate.state3'
+Slack : -3.928
+TNS   : -15.331
+
+Type  : Slow 1200mV 0C Model Setup 'CronoSM:cronometro|fstate.state3'
+Slack : -3.471
+TNS   : -13.266
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -2.045
-TNS   : -32.059
+Slack : -2.184
+TNS   : -37.922
 
-Type  : Slow 1200mV 0C Model Hold 'divisorGenerico:freq|cnt[25]'
-Slack : -0.049
-TNS   : -0.093
-
-Type  : Slow 1200mV 0C Model Hold 'divisorGenerico:freq2|cnt[20]'
-Slack : 0.092
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.366
+Type  : Slow 1200mV 0C Model Setup 'divisorGenerico:freq3|cnt[24]'
+Slack : 0.297
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'AjusteSM:ajuste|fstate.state3'
-Slack : 0.460
+Slack : 0.249
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'divisorGenerico:freq|cnt[25]'
+Slack : 0.336
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'divisorGenerico:freq2|cnt[22]'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.365
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'divisorGenerico:freq3|cnt[24]'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CronoSM:cronometro|fstate.state3'
+Slack : 0.484
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'AjusteSM:ajuste_alarme|fstate.state3'
+Slack : 1.131
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -37.695
+TNS   : -38.980
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
 Slack : -1.285
-TNS   : -51.400
+TNS   : -87.380
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq2|cnt[20]'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq2|cnt[22]'
 Slack : -1.285
-TNS   : -41.120
+TNS   : -79.670
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq3|cnt[24]'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'AjusteSM:ajuste_alarme|fstate.state3'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CronoSM:cronometro|fstate.state3'
+Slack : 0.418
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'AjusteSM:ajuste|fstate.state3'
-Slack : 0.421
+Slack : 0.437
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'AjusteSM:ajuste|fstate.state3'
-Slack : -2.902
-TNS   : -10.896
-
-Type  : Fast 1200mV 0C Model Setup 'divisorGenerico:freq2|cnt[20]'
-Slack : -1.590
-TNS   : -27.923
+Slack : -2.481
+TNS   : -9.482
 
 Type  : Fast 1200mV 0C Model Setup 'divisorGenerico:freq|cnt[25]'
-Slack : -1.483
-TNS   : -30.511
+Slack : -2.137
+TNS   : -74.355
+
+Type  : Fast 1200mV 0C Model Setup 'divisorGenerico:freq2|cnt[22]'
+Slack : -2.027
+TNS   : -50.743
+
+Type  : Fast 1200mV 0C Model Setup 'AjusteSM:ajuste_alarme|fstate.state3'
+Slack : -1.567
+TNS   : -5.871
+
+Type  : Fast 1200mV 0C Model Setup 'CronoSM:cronometro|fstate.state3'
+Slack : -1.458
+TNS   : -5.687
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.856
-TNS   : -6.576
+Slack : -0.733
+TNS   : -8.680
 
-Type  : Fast 1200mV 0C Model Hold 'AjusteSM:ajuste|fstate.state3'
-Slack : -0.046
-TNS   : -0.046
-
-Type  : Fast 1200mV 0C Model Hold 'divisorGenerico:freq|cnt[25]'
-Slack : 0.029
+Type  : Fast 1200mV 0C Model Setup 'divisorGenerico:freq3|cnt[24]'
+Slack : 0.626
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'divisorGenerico:freq2|cnt[20]'
-Slack : 0.112
+Type  : Fast 1200mV 0C Model Hold 'AjusteSM:ajuste|fstate.state3'
+Slack : -0.119
+TNS   : -0.119
+
+Type  : Fast 1200mV 0C Model Hold 'CronoSM:cronometro|fstate.state3'
+Slack : -0.116
+TNS   : -0.116
+
+Type  : Fast 1200mV 0C Model Hold 'divisorGenerico:freq|cnt[25]'
+Slack : 0.073
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'divisorGenerico:freq2|cnt[22]'
+Slack : 0.100
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.190
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'divisorGenerico:freq3|cnt[24]'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'AjusteSM:ajuste_alarme|fstate.state3'
+Slack : 0.239
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -31.850
+TNS   : -32.703
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq|cnt[25]'
 Slack : -1.000
-TNS   : -40.000
+TNS   : -68.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq2|cnt[20]'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq2|cnt[22]'
 Slack : -1.000
-TNS   : -32.000
+TNS   : -62.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisorGenerico:freq3|cnt[24]'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CronoSM:cronometro|fstate.state3'
+Slack : 0.319
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'AjusteSM:ajuste|fstate.state3'
-Slack : 0.432
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'AjusteSM:ajuste_alarme|fstate.state3'
+Slack : 0.446
 TNS   : 0.000
 
 ------------------------------------------------------------

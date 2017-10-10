@@ -1,4 +1,21 @@
 
+State Machine - |relogio|AlarmeSM:relogio_alarme|fstate
+Name fstate.state3 fstate.state2 fstate.state1 
+fstate.state1 0 0 0 
+fstate.state2 0 1 1 
+fstate.state3 1 0 1 
+
+State Machine - |relogio|AjusteSM:ajuste_alarme|fstate
+Name fstate.state1 fstate.state7 fstate.state6 fstate.state5 fstate.state4 fstate.state3 fstate.state2 fstate.stateD 
+fstate.stateD 0 0 0 0 0 0 0 0 
+fstate.state2 0 0 0 0 0 0 1 1 
+fstate.state3 0 0 0 0 0 1 0 1 
+fstate.state4 0 0 0 0 1 0 0 1 
+fstate.state5 0 0 0 1 0 0 0 1 
+fstate.state6 0 0 1 0 0 0 0 1 
+fstate.state7 0 1 0 0 0 0 0 1 
+fstate.state1 1 0 0 0 0 0 0 1 
+
 State Machine - |relogio|AjusteSM:ajuste|fstate
 Name fstate.state1 fstate.state7 fstate.state6 fstate.state5 fstate.state4 fstate.state3 fstate.state2 fstate.stateD 
 fstate.stateD 0 0 0 0 0 0 0 0 
@@ -9,6 +26,18 @@ fstate.state5 0 0 0 1 0 0 0 1
 fstate.state6 0 0 1 0 0 0 0 1 
 fstate.state7 0 1 0 0 0 0 0 1 
 fstate.state1 1 0 0 0 0 0 0 1 
+
+State Machine - |relogio|CronoSM:cronometro|fstate
+Name fstate.stateZerar fstate.state1 fstate.state7 fstate.state6 fstate.state5 fstate.state4 fstate.state3 fstate.state2 fstate.state0 
+fstate.state0 0 0 0 0 0 0 0 0 0 
+fstate.state2 0 0 0 0 0 0 0 1 1 
+fstate.state3 0 0 0 0 0 0 1 0 1 
+fstate.state4 0 0 0 0 0 1 0 0 1 
+fstate.state5 0 0 0 0 1 0 0 0 1 
+fstate.state6 0 0 0 1 0 0 0 0 1 
+fstate.state7 0 0 1 0 0 0 0 0 1 
+fstate.state1 0 1 0 0 0 0 0 0 1 
+fstate.stateZerar 1 0 0 0 0 0 0 0 1 
 
 State Machine - |relogio|SM1:relogio|fstate
 Name fstate.state7 fstate.state6 fstate.state5 fstate.state4 fstate.state3 fstate.state2 fstate.state1 

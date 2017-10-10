@@ -577,6 +577,13 @@ set_location_assignment PIN_D9 -to EXT_IO[6]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE divisorFase.vhd
+set_global_assignment -name VHDL_FILE countador.vhd
+set_global_assignment -name VHDL_FILE CronoSM.vhd
+set_global_assignment -name SMF_FILE CronoSM.smf
+set_global_assignment -name VHDL_FILE comparador.vhd
+set_global_assignment -name VHDL_FILE AlarmeSM.vhd
+set_global_assignment -name SMF_FILE AlarmeSM.smf
 set_global_assignment -name VHDL_FILE ModoSM.vhd
 set_global_assignment -name VHDL_FILE AjusteSM.vhd
 set_global_assignment -name SMF_FILE AjusteSM.smf

@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 use ieee.numeric_std.all;
 
-entity divisorGenerico is
+entity countador is
     generic
     (divisor : natural := 8);
     port(
@@ -11,29 +11,22 @@ entity divisorGenerico is
         );
 end entity;
 
-architecture divisaoPor2 of divisorGenerico is
-    signal tick : std_logic;
-begin
-    process(clk)
-    begin
-        if rising_edge(clk) then
-            tick <= not tick;
-        end if;
-    end process;
-    saida_clk <= tick;
-end architecture;
 
 
-architecture divisaoGenerica of divisorGenerico is
-    signal cnt : std_logic_vector(divisor downto 0);
+architecture divisaoSegundo of countador is
+    signal cnt : unsigned(25 downto 0) := (others => '0');
     begin
         process(clk)
         begin
             if rising_edge(clk) then
-                cnt <= std_logic_vector(unsigned(cnt) + 1);
+              if cnt = 50000000 then
+                cnt <= (others => '0');
+					    else
+                cnt <= cnt + 1;
+              end if;
             end if;
         end process;
-        select unsigned(cnt) < 25000000 then
+        saida_clk <= '1' WHEN (cnt) < 25000000 ELSE
+                    '0';
 
-        saida_clk <= cnt;
 end architecture;

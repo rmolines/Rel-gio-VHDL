@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Relogio
-Sun Oct  8 19:44:58 2017
+Mon Oct  9 23:01:53 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,33 +13,52 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |relogio|AjusteSM:ajuste|fstate
-  9. State Machine - |relogio|SM1:relogio|fstate
- 10. User-Specified and Inferred Latches
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_SEC_U
- 15. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_SEC_D
- 16. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_MIN_U
- 17. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_MIN_D
- 18. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_H_U
- 19. Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_H_D
- 20. Parameter Settings for User Entity Instance: divisorGenerico:freq
- 21. Parameter Settings for User Entity Instance: divisorGenerico:freq2
- 22. Port Connectivity Checks: "ModoSM:modo"
- 23. Port Connectivity Checks: "AjusteSM:ajuste"
- 24. Port Connectivity Checks: "SM1:relogio"
- 25. Port Connectivity Checks: "conversorHex7Seg:display5"
- 26. Port Connectivity Checks: "conversorHex7Seg:display4"
- 27. Port Connectivity Checks: "conversorHex7Seg:display3"
- 28. Port Connectivity Checks: "conversorHex7Seg:display2"
- 29. Port Connectivity Checks: "conversorHex7Seg:display1"
- 30. Port Connectivity Checks: "conversorHex7Seg:display0"
- 31. Port Connectivity Checks: "fluxo:FD|ULA:ULA"
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
+  8. State Machine - |relogio|AlarmeSM:relogio_alarme|fstate
+  9. State Machine - |relogio|AjusteSM:ajuste_alarme|fstate
+ 10. State Machine - |relogio|AjusteSM:ajuste|fstate
+ 11. State Machine - |relogio|CronoSM:cronometro|fstate
+ 12. State Machine - |relogio|SM1:relogio|fstate
+ 13. User-Specified and Inferred Latches
+ 14. Registers Removed During Synthesis
+ 15. General Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Parameter Settings for User Entity Instance: fluxo:FD_rel|registradorGenerico:REG_SEC_U
+ 18. Parameter Settings for User Entity Instance: fluxo:FD_rel|registradorGenerico:REG_SEC_D
+ 19. Parameter Settings for User Entity Instance: fluxo:FD_rel|registradorGenerico:REG_MIN_U
+ 20. Parameter Settings for User Entity Instance: fluxo:FD_rel|registradorGenerico:REG_MIN_D
+ 21. Parameter Settings for User Entity Instance: fluxo:FD_rel|registradorGenerico:REG_H_U
+ 22. Parameter Settings for User Entity Instance: fluxo:FD_rel|registradorGenerico:REG_H_D
+ 23. Parameter Settings for User Entity Instance: fluxo:FD_alarme|registradorGenerico:REG_SEC_U
+ 24. Parameter Settings for User Entity Instance: fluxo:FD_alarme|registradorGenerico:REG_SEC_D
+ 25. Parameter Settings for User Entity Instance: fluxo:FD_alarme|registradorGenerico:REG_MIN_U
+ 26. Parameter Settings for User Entity Instance: fluxo:FD_alarme|registradorGenerico:REG_MIN_D
+ 27. Parameter Settings for User Entity Instance: fluxo:FD_alarme|registradorGenerico:REG_H_U
+ 28. Parameter Settings for User Entity Instance: fluxo:FD_alarme|registradorGenerico:REG_H_D
+ 29. Parameter Settings for User Entity Instance: fluxo:FD_cronometro|registradorGenerico:REG_SEC_U
+ 30. Parameter Settings for User Entity Instance: fluxo:FD_cronometro|registradorGenerico:REG_SEC_D
+ 31. Parameter Settings for User Entity Instance: fluxo:FD_cronometro|registradorGenerico:REG_MIN_U
+ 32. Parameter Settings for User Entity Instance: fluxo:FD_cronometro|registradorGenerico:REG_MIN_D
+ 33. Parameter Settings for User Entity Instance: fluxo:FD_cronometro|registradorGenerico:REG_H_U
+ 34. Parameter Settings for User Entity Instance: fluxo:FD_cronometro|registradorGenerico:REG_H_D
+ 35. Parameter Settings for User Entity Instance: divisorGenerico:freq
+ 36. Parameter Settings for User Entity Instance: divisorGenerico:freq2
+ 37. Parameter Settings for User Entity Instance: divisorGenerico:freq3
+ 38. Port Connectivity Checks: "AlarmeSM:relogio_alarme"
+ 39. Port Connectivity Checks: "ModoSM:ajuste_relogio"
+ 40. Port Connectivity Checks: "AjusteSM:ajuste_alarme"
+ 41. Port Connectivity Checks: "AjusteSM:ajuste"
+ 42. Port Connectivity Checks: "CronoSM:cronometro"
+ 43. Port Connectivity Checks: "SM1:relogio"
+ 44. Port Connectivity Checks: "conversorHex7Seg:display5"
+ 45. Port Connectivity Checks: "conversorHex7Seg:display4"
+ 46. Port Connectivity Checks: "conversorHex7Seg:display3"
+ 47. Port Connectivity Checks: "conversorHex7Seg:display2"
+ 48. Port Connectivity Checks: "conversorHex7Seg:display1"
+ 49. Port Connectivity Checks: "conversorHex7Seg:display0"
+ 50. Port Connectivity Checks: "fluxo:FD_rel|ULA:ULA"
+ 51. Post-Synthesis Netlist Statistics for Top Partition
+ 52. Elapsed Time Per Partition
+ 53. Analysis & Synthesis Messages
 
 
 
@@ -66,15 +85,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct  8 19:44:58 2017       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct  9 23:01:53 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Relogio                                     ;
 ; Top-level Entity Name              ; relogio                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 196                                         ;
-;     Total combinational functions  ; 195                                         ;
-;     Dedicated logic registers      ; 67                                          ;
-; Total registers                    ; 67                                          ;
+; Total logic elements               ; 449                                         ;
+;     Total combinational functions  ; 443                                         ;
+;     Dedicated logic registers      ; 135                                         ;
+; Total registers                    ; 135                                         ;
 ; Total pins                         ; 106                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -191,6 +210,10 @@ agreement for further details.
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                 ; Library ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
+; divisorFase.vhd                  ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorFase.vhd         ;         ;
+; CronoSM.vhd                      ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/CronoSM.vhd             ;         ;
+; comparador.vhd                   ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/comparador.vhd          ;         ;
+; AlarmeSM.vhd                     ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AlarmeSM.vhd            ;         ;
 ; ModoSM.vhd                       ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd              ;         ;
 ; AjusteSM.vhd                     ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AjusteSM.vhd            ;         ;
 ; Relogio.vhd                      ; yes             ; User VHDL File  ; /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd             ;         ;
@@ -204,66 +227,118 @@ agreement for further details.
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                      ;
-+---------------------------------------------+--------------------+
-; Resource                                    ; Usage              ;
-+---------------------------------------------+--------------------+
-; Estimated Total logic elements              ; 196                ;
-;                                             ;                    ;
-; Total combinational functions               ; 195                ;
-; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 121                ;
-;     -- 3 input functions                    ; 23                 ;
-;     -- <=2 input functions                  ; 51                 ;
-;                                             ;                    ;
-; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 152                ;
-;     -- arithmetic mode                      ; 43                 ;
-;                                             ;                    ;
-; Total registers                             ; 67                 ;
-;     -- Dedicated logic registers            ; 67                 ;
-;     -- I/O registers                        ; 0                  ;
-;                                             ;                    ;
-; I/O pins                                    ; 106                ;
-;                                             ;                    ;
-; Embedded Multiplier 9-bit elements          ; 0                  ;
-;                                             ;                    ;
-; Maximum fan-out node                        ; ModoSM:modo|fstate ;
-; Maximum fan-out                             ; 34                 ;
-; Total fan-out                               ; 970                ;
-; Average fan-out                             ; 2.05               ;
-+---------------------------------------------+--------------------+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                         ;
++---------------------------------------------+---------------------------------------+
+; Resource                                    ; Usage                                 ;
++---------------------------------------------+---------------------------------------+
+; Estimated Total logic elements              ; 449                                   ;
+;                                             ;                                       ;
+; Total combinational functions               ; 443                                   ;
+; Logic element usage by number of LUT inputs ;                                       ;
+;     -- 4 input functions                    ; 243                                   ;
+;     -- 3 input functions                    ; 100                                   ;
+;     -- <=2 input functions                  ; 100                                   ;
+;                                             ;                                       ;
+; Logic elements by mode                      ;                                       ;
+;     -- normal mode                          ; 375                                   ;
+;     -- arithmetic mode                      ; 68                                    ;
+;                                             ;                                       ;
+; Total registers                             ; 135                                   ;
+;     -- Dedicated logic registers            ; 135                                   ;
+;     -- I/O registers                        ; 0                                     ;
+;                                             ;                                       ;
+; I/O pins                                    ; 106                                   ;
+;                                             ;                                       ;
+; Embedded Multiplier 9-bit elements          ; 0                                     ;
+;                                             ;                                       ;
+; Maximum fan-out node                        ; AlarmeSM:relogio_alarme|fstate.state3 ;
+; Maximum fan-out                             ; 49                                    ;
+; Total fan-out                               ; 1966                                  ;
+; Average fan-out                             ; 2.49                                  ;
++---------------------------------------------+---------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                     ;
-+---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                             ; Entity Name         ; Library Name ;
-+---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+---------------------+--------------+
-; |relogio                              ; 195 (0)             ; 67 (0)                    ; 0           ; 0            ; 0       ; 0         ; 106  ; 0            ; |relogio                                        ; SM1                 ; work         ;
-;    |AjusteSM:ajuste|                  ; 27 (27)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|AjusteSM:ajuste                        ; AjusteSM            ; work         ;
-;    |ModoSM:modo|                      ; 10 (10)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|ModoSM:modo                            ; ModoSM              ; work         ;
-;    |SM1:relogio|                      ; 15 (15)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|SM1:relogio                            ; SM1                 ; work         ;
-;    |conversorHex7Seg:display0|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display0              ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:display1|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display1              ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:display2|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display2              ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:display3|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display3              ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:display4|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display4              ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:display5|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display5              ; conversorHex7Seg    ; work         ;
-;    |divisorGenerico:freq2|            ; 21 (21)             ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:freq2                  ; divisorGenerico     ; work         ;
-;    |divisorGenerico:freq|             ; 25 (25)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:freq                   ; divisorGenerico     ; work         ;
-;    |fluxo:FD|                         ; 55 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD                               ; fluxo               ; work         ;
-;       |MUX6:MUX6|                     ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|MUX6:MUX6                     ; MUX6                ; work         ;
-;       |ULA:ULA|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|ULA:ULA                       ; ULA                 ; work         ;
-;       |registradorGenerico:REG_H_D|   ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_H_D   ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG_H_U|   ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_H_U   ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG_MIN_D| ; 6 (6)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_MIN_D ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG_MIN_U| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_MIN_U ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG_SEC_D| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_SEC_D ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG_SEC_U| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD|registradorGenerico:REG_SEC_U ; registradorGenerico ; work         ;
-+---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Entity Name         ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+---------------------+--------------+
+; |relogio                              ; 443 (18)            ; 135 (0)                   ; 0           ; 0            ; 0       ; 0         ; 106  ; 0            ; |relogio                                                   ; SM1                 ; work         ;
+;    |AjusteSM:ajuste_alarme|           ; 29 (29)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|AjusteSM:ajuste_alarme                            ; AjusteSM            ; work         ;
+;    |AjusteSM:ajuste|                  ; 24 (24)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|AjusteSM:ajuste                                   ; AjusteSM            ; work         ;
+;    |AlarmeSM:relogio_alarme|          ; 51 (51)             ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|AlarmeSM:relogio_alarme                           ; AlarmeSM            ; work         ;
+;    |CronoSM:cronometro|               ; 28 (28)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|CronoSM:cronometro                                ; CronoSM             ; work         ;
+;    |ModoSM:ajuste_relogio|            ; 12 (12)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|ModoSM:ajuste_relogio                             ; ModoSM              ; work         ;
+;    |SM1:relogio|                      ; 16 (16)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|SM1:relogio                                       ; SM1                 ; work         ;
+;    |conversorHex7Seg:display0|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display0                         ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:display1|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display1                         ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:display2|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display2                         ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:display3|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display3                         ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:display4|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display4                         ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:display5|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:display5                         ; conversorHex7Seg    ; work         ;
+;    |divisorFase:freq4|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorFase:freq4                                 ; divisorFase         ; work         ;
+;    |divisorGenerico:freq2|            ; 22 (22)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:freq2                             ; divisorGenerico     ; work         ;
+;    |divisorGenerico:freq3|            ; 25 (25)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:freq3                             ; divisorGenerico     ; work         ;
+;    |divisorGenerico:freq|             ; 25 (25)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:freq                              ; divisorGenerico     ; work         ;
+;    |fluxo:FD_alarme|                  ; 41 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_alarme                                   ; fluxo               ; work         ;
+;       |MUX6:MUX6|                     ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_alarme|MUX6:MUX6                         ; MUX6                ; work         ;
+;       |ULA:ULA|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_alarme|ULA:ULA                           ; ULA                 ; work         ;
+;       |registradorGenerico:REG_H_D|   ; 2 (2)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_alarme|registradorGenerico:REG_H_D       ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_H_U|   ; 3 (3)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_alarme|registradorGenerico:REG_H_U       ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_MIN_D| ; 3 (3)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_alarme|registradorGenerico:REG_MIN_D     ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_MIN_U| ; 3 (3)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_alarme|registradorGenerico:REG_MIN_U     ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_SEC_D| ; 3 (3)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_alarme|registradorGenerico:REG_SEC_D     ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_SEC_U| ; 3 (3)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_alarme|registradorGenerico:REG_SEC_U     ; registradorGenerico ; work         ;
+;    |fluxo:FD_cronometro|              ; 53 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_cronometro                               ; fluxo               ; work         ;
+;       |MUX6:MUX6|                     ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_cronometro|MUX6:MUX6                     ; MUX6                ; work         ;
+;       |ULA:ULA|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_cronometro|ULA:ULA                       ; ULA                 ; work         ;
+;       |registradorGenerico:REG_H_D|   ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_cronometro|registradorGenerico:REG_H_D   ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_H_U|   ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_cronometro|registradorGenerico:REG_H_U   ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_MIN_D| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_cronometro|registradorGenerico:REG_MIN_D ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_MIN_U| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_cronometro|registradorGenerico:REG_MIN_U ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_SEC_D| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_cronometro|registradorGenerico:REG_SEC_D ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_SEC_U| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_cronometro|registradorGenerico:REG_SEC_U ; registradorGenerico ; work         ;
+;    |fluxo:FD_rel|                     ; 56 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_rel                                      ; fluxo               ; work         ;
+;       |MUX6:MUX6|                     ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_rel|MUX6:MUX6                            ; MUX6                ; work         ;
+;       |ULA:ULA|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_rel|ULA:ULA                              ; ULA                 ; work         ;
+;       |registradorGenerico:REG_H_D|   ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_rel|registradorGenerico:REG_H_D          ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_H_U|   ; 6 (6)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_rel|registradorGenerico:REG_H_U          ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_MIN_D| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_rel|registradorGenerico:REG_MIN_D        ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_MIN_U| ; 6 (6)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_rel|registradorGenerico:REG_MIN_U        ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_SEC_D| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_rel|registradorGenerico:REG_SEC_D        ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_SEC_U| ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|fluxo:FD_rel|registradorGenerico:REG_SEC_U        ; registradorGenerico ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------+
+; State Machine - |relogio|AlarmeSM:relogio_alarme|fstate       ;
++---------------+---------------+---------------+---------------+
+; Name          ; fstate.state3 ; fstate.state2 ; fstate.state1 ;
++---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 1             ; 1             ;
+; fstate.state3 ; 1             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |relogio|AjusteSM:ajuste_alarme|fstate                                                                                        ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state1 ; fstate.state7 ; fstate.state6 ; fstate.state5 ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.stateD ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; fstate.stateD ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state3 ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state4 ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 1             ;
+; fstate.state5 ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state6 ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state7 ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state1 ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
 
 
 Encoding Type:  One-Hot
@@ -284,6 +359,24 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |relogio|CronoSM:cronometro|fstate                                                                                                                    ;
++-------------------+-------------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; Name              ; fstate.stateZerar ; fstate.state1 ; fstate.state7 ; fstate.state6 ; fstate.state5 ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state0 ;
++-------------------+-------------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; fstate.state0     ; 0                 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2     ; 0                 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state3     ; 0                 ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state4     ; 0                 ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 1             ;
+; fstate.state5     ; 0                 ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state6     ; 0                 ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state7     ; 0                 ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state1     ; 0                 ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.stateZerar ; 1                 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
++-------------------+-------------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |relogio|SM1:relogio|fstate                                                                                   ;
 +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
@@ -299,17 +392,25 @@ Encoding Type:  One-Hot
 +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                       ;
-+----------------------------------------------------+-----------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal         ; Free of Timing Hazards ;
-+----------------------------------------------------+-----------------------------+------------------------+
-; fluxo:FD|MUX6:MUX6|SAIDA[2]                        ; fluxo:FD|MUX6:MUX6|SAIDA[3] ; yes                    ;
-; fluxo:FD|MUX6:MUX6|SAIDA[0]                        ; fluxo:FD|MUX6:MUX6|SAIDA[3] ; yes                    ;
-; fluxo:FD|MUX6:MUX6|SAIDA[1]                        ; fluxo:FD|MUX6:MUX6|SAIDA[3] ; yes                    ;
-; fluxo:FD|MUX6:MUX6|SAIDA[3]                        ; fluxo:FD|MUX6:MUX6|SAIDA[3] ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                             ;                        ;
-+----------------------------------------------------+-----------------------------+------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                   ;
++-----------------------------------------------------+----------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                    ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------------------------+------------------------+
+; fluxo:FD_rel|MUX6:MUX6|SAIDA[0]                     ; fluxo:FD_rel|MUX6:MUX6|SAIDA[3]        ; yes                    ;
+; fluxo:FD_rel|MUX6:MUX6|SAIDA[1]                     ; fluxo:FD_rel|MUX6:MUX6|SAIDA[3]        ; yes                    ;
+; fluxo:FD_rel|MUX6:MUX6|SAIDA[2]                     ; fluxo:FD_rel|MUX6:MUX6|SAIDA[3]        ; yes                    ;
+; fluxo:FD_rel|MUX6:MUX6|SAIDA[3]                     ; fluxo:FD_rel|MUX6:MUX6|SAIDA[3]        ; yes                    ;
+; fluxo:FD_alarme|MUX6:MUX6|SAIDA[0]                  ; fluxo:FD_alarme|MUX6:MUX6|SAIDA[3]     ; yes                    ;
+; fluxo:FD_alarme|MUX6:MUX6|SAIDA[2]                  ; fluxo:FD_alarme|MUX6:MUX6|SAIDA[3]     ; yes                    ;
+; fluxo:FD_alarme|MUX6:MUX6|SAIDA[1]                  ; fluxo:FD_alarme|MUX6:MUX6|SAIDA[3]     ; yes                    ;
+; fluxo:FD_alarme|MUX6:MUX6|SAIDA[3]                  ; fluxo:FD_alarme|MUX6:MUX6|SAIDA[3]     ; yes                    ;
+; fluxo:FD_cronometro|MUX6:MUX6|SAIDA[0]              ; fluxo:FD_cronometro|MUX6:MUX6|SAIDA[3] ; yes                    ;
+; fluxo:FD_cronometro|MUX6:MUX6|SAIDA[1]              ; fluxo:FD_cronometro|MUX6:MUX6|SAIDA[3] ; yes                    ;
+; fluxo:FD_cronometro|MUX6:MUX6|SAIDA[3]              ; fluxo:FD_cronometro|MUX6:MUX6|SAIDA[3] ; yes                    ;
+; fluxo:FD_cronometro|MUX6:MUX6|SAIDA[2]              ; fluxo:FD_cronometro|MUX6:MUX6|SAIDA[3] ; yes                    ;
+; Number of user-specified and inferred latches = 12  ;                                        ;                        ;
++-----------------------------------------------------+----------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -318,27 +419,55 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+-------------------------------------------+
 ; Register name                          ; Reason for Removal                        ;
 +----------------------------------------+-------------------------------------------+
-; divisorGenerico:freq|cnt[0]            ; Merged with divisorGenerico:freq2|cnt[0]  ;
-; divisorGenerico:freq|cnt[1]            ; Merged with divisorGenerico:freq2|cnt[1]  ;
-; divisorGenerico:freq|cnt[2]            ; Merged with divisorGenerico:freq2|cnt[2]  ;
-; divisorGenerico:freq|cnt[3]            ; Merged with divisorGenerico:freq2|cnt[3]  ;
-; divisorGenerico:freq|cnt[4]            ; Merged with divisorGenerico:freq2|cnt[4]  ;
-; divisorGenerico:freq|cnt[5]            ; Merged with divisorGenerico:freq2|cnt[5]  ;
-; divisorGenerico:freq|cnt[6]            ; Merged with divisorGenerico:freq2|cnt[6]  ;
-; divisorGenerico:freq|cnt[7]            ; Merged with divisorGenerico:freq2|cnt[7]  ;
-; divisorGenerico:freq|cnt[8]            ; Merged with divisorGenerico:freq2|cnt[8]  ;
-; divisorGenerico:freq|cnt[9]            ; Merged with divisorGenerico:freq2|cnt[9]  ;
-; divisorGenerico:freq|cnt[10]           ; Merged with divisorGenerico:freq2|cnt[10] ;
-; divisorGenerico:freq|cnt[11]           ; Merged with divisorGenerico:freq2|cnt[11] ;
-; divisorGenerico:freq|cnt[12]           ; Merged with divisorGenerico:freq2|cnt[12] ;
-; divisorGenerico:freq|cnt[13]           ; Merged with divisorGenerico:freq2|cnt[13] ;
-; divisorGenerico:freq|cnt[14]           ; Merged with divisorGenerico:freq2|cnt[14] ;
-; divisorGenerico:freq|cnt[15]           ; Merged with divisorGenerico:freq2|cnt[15] ;
-; divisorGenerico:freq|cnt[16]           ; Merged with divisorGenerico:freq2|cnt[16] ;
-; divisorGenerico:freq|cnt[17]           ; Merged with divisorGenerico:freq2|cnt[17] ;
-; divisorGenerico:freq|cnt[18]           ; Merged with divisorGenerico:freq2|cnt[18] ;
-; divisorGenerico:freq|cnt[19]           ; Merged with divisorGenerico:freq2|cnt[19] ;
-; Total Number of Removed Registers = 20 ;                                           ;
+; divisorGenerico:freq2|cnt[0]           ; Merged with divisorGenerico:freq3|cnt[0]  ;
+; divisorGenerico:freq|cnt[0]            ; Merged with divisorGenerico:freq3|cnt[0]  ;
+; divisorGenerico:freq|cnt[1]            ; Merged with divisorGenerico:freq3|cnt[1]  ;
+; divisorGenerico:freq2|cnt[1]           ; Merged with divisorGenerico:freq3|cnt[1]  ;
+; divisorGenerico:freq|cnt[2]            ; Merged with divisorGenerico:freq3|cnt[2]  ;
+; divisorGenerico:freq2|cnt[2]           ; Merged with divisorGenerico:freq3|cnt[2]  ;
+; divisorGenerico:freq|cnt[3]            ; Merged with divisorGenerico:freq3|cnt[3]  ;
+; divisorGenerico:freq2|cnt[3]           ; Merged with divisorGenerico:freq3|cnt[3]  ;
+; divisorGenerico:freq|cnt[4]            ; Merged with divisorGenerico:freq3|cnt[4]  ;
+; divisorGenerico:freq2|cnt[4]           ; Merged with divisorGenerico:freq3|cnt[4]  ;
+; divisorGenerico:freq|cnt[5]            ; Merged with divisorGenerico:freq3|cnt[5]  ;
+; divisorGenerico:freq2|cnt[5]           ; Merged with divisorGenerico:freq3|cnt[5]  ;
+; divisorGenerico:freq|cnt[6]            ; Merged with divisorGenerico:freq3|cnt[6]  ;
+; divisorGenerico:freq2|cnt[6]           ; Merged with divisorGenerico:freq3|cnt[6]  ;
+; divisorGenerico:freq|cnt[7]            ; Merged with divisorGenerico:freq3|cnt[7]  ;
+; divisorGenerico:freq2|cnt[7]           ; Merged with divisorGenerico:freq3|cnt[7]  ;
+; divisorGenerico:freq|cnt[8]            ; Merged with divisorGenerico:freq3|cnt[8]  ;
+; divisorGenerico:freq2|cnt[8]           ; Merged with divisorGenerico:freq3|cnt[8]  ;
+; divisorGenerico:freq|cnt[9]            ; Merged with divisorGenerico:freq3|cnt[9]  ;
+; divisorGenerico:freq2|cnt[9]           ; Merged with divisorGenerico:freq3|cnt[9]  ;
+; divisorGenerico:freq|cnt[10]           ; Merged with divisorGenerico:freq3|cnt[10] ;
+; divisorGenerico:freq2|cnt[10]          ; Merged with divisorGenerico:freq3|cnt[10] ;
+; divisorGenerico:freq|cnt[11]           ; Merged with divisorGenerico:freq3|cnt[11] ;
+; divisorGenerico:freq2|cnt[11]          ; Merged with divisorGenerico:freq3|cnt[11] ;
+; divisorGenerico:freq2|cnt[12]          ; Merged with divisorGenerico:freq3|cnt[12] ;
+; divisorGenerico:freq|cnt[12]           ; Merged with divisorGenerico:freq3|cnt[12] ;
+; divisorGenerico:freq|cnt[13]           ; Merged with divisorGenerico:freq3|cnt[13] ;
+; divisorGenerico:freq2|cnt[13]          ; Merged with divisorGenerico:freq3|cnt[13] ;
+; divisorGenerico:freq2|cnt[14]          ; Merged with divisorGenerico:freq3|cnt[14] ;
+; divisorGenerico:freq|cnt[14]           ; Merged with divisorGenerico:freq3|cnt[14] ;
+; divisorGenerico:freq|cnt[15]           ; Merged with divisorGenerico:freq3|cnt[15] ;
+; divisorGenerico:freq2|cnt[15]          ; Merged with divisorGenerico:freq3|cnt[15] ;
+; divisorGenerico:freq2|cnt[16]          ; Merged with divisorGenerico:freq3|cnt[16] ;
+; divisorGenerico:freq|cnt[16]           ; Merged with divisorGenerico:freq3|cnt[16] ;
+; divisorGenerico:freq2|cnt[17]          ; Merged with divisorGenerico:freq3|cnt[17] ;
+; divisorGenerico:freq|cnt[17]           ; Merged with divisorGenerico:freq3|cnt[17] ;
+; divisorGenerico:freq2|cnt[18]          ; Merged with divisorGenerico:freq3|cnt[18] ;
+; divisorGenerico:freq|cnt[18]           ; Merged with divisorGenerico:freq3|cnt[18] ;
+; divisorGenerico:freq2|cnt[19]          ; Merged with divisorGenerico:freq3|cnt[19] ;
+; divisorGenerico:freq|cnt[19]           ; Merged with divisorGenerico:freq3|cnt[19] ;
+; divisorGenerico:freq2|cnt[20]          ; Merged with divisorGenerico:freq3|cnt[20] ;
+; divisorGenerico:freq|cnt[20]           ; Merged with divisorGenerico:freq3|cnt[20] ;
+; divisorGenerico:freq|cnt[21]           ; Merged with divisorGenerico:freq3|cnt[21] ;
+; divisorGenerico:freq2|cnt[21]          ; Merged with divisorGenerico:freq3|cnt[21] ;
+; divisorGenerico:freq|cnt[22]           ; Merged with divisorGenerico:freq3|cnt[22] ;
+; divisorGenerico:freq|cnt[23]           ; Merged with divisorGenerico:freq3|cnt[23] ;
+; AjusteSM:ajuste_alarme|fstate.state7   ; Stuck at GND due to stuck port data_in    ;
+; AjusteSM:ajuste|fstate.state7          ; Stuck at GND due to stuck port data_in    ;
+; Total Number of Removed Registers = 48 ;                                           ;
 +----------------------------------------+-------------------------------------------+
 
 
@@ -347,88 +476,223 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 67    ;
+; Total registers                              ; 135   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Clock Enable       ; 72    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_SEC_U|DOUT[0] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_SEC_D|DOUT[0] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_MIN_U|DOUT[1] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_MIN_D|DOUT[1] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_H_U|DOUT[3]   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD|registradorGenerico:REG_H_D|DOUT[3]   ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |relogio|fluxo:FD|MUX6:MUX6|SAIDA[1]                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_alarme|registradorGenerico:REG_SEC_D|DOUT[3]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_alarme|registradorGenerico:REG_MIN_U|DOUT[3]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_alarme|registradorGenerico:REG_MIN_D|DOUT[3]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_alarme|registradorGenerico:REG_H_U|DOUT[1]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_alarme|registradorGenerico:REG_H_D|DOUT[3]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_alarme|registradorGenerico:REG_SEC_U|DOUT[0]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_cronometro|registradorGenerico:REG_SEC_D|DOUT[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_cronometro|registradorGenerico:REG_MIN_U|DOUT[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_cronometro|registradorGenerico:REG_MIN_D|DOUT[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_cronometro|registradorGenerico:REG_H_U|DOUT[2]   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_cronometro|registradorGenerico:REG_H_D|DOUT[0]   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_cronometro|registradorGenerico:REG_SEC_U|DOUT[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_rel|registradorGenerico:REG_SEC_U|DOUT[1]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_rel|registradorGenerico:REG_SEC_D|DOUT[0]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_rel|registradorGenerico:REG_MIN_U|DOUT[2]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_rel|registradorGenerico:REG_MIN_D|DOUT[3]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_rel|registradorGenerico:REG_H_U|DOUT[0]          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |relogio|fluxo:FD_rel|registradorGenerico:REG_H_D|DOUT[1]          ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |relogio|AlarmeSM:relogio_alarme|Selector16                        ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |relogio|fluxo:FD_alarme|MUX6:MUX6|SAIDA[2]                        ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |relogio|fluxo:FD_rel|MUX6:MUX6|SAIDA[2]                           ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |relogio|fluxo:FD_cronometro|MUX6:MUX6|SAIDA[3]                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_SEC_U ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; larguradados   ; 4     ; Signed Integer                                             ;
-+----------------+-------+------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_rel|registradorGenerico:REG_SEC_U ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_SEC_D ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; larguradados   ; 4     ; Signed Integer                                             ;
-+----------------+-------+------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_rel|registradorGenerico:REG_SEC_D ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_MIN_U ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; larguradados   ; 4     ; Signed Integer                                             ;
-+----------------+-------+------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_rel|registradorGenerico:REG_MIN_U ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_MIN_D ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; larguradados   ; 4     ; Signed Integer                                             ;
-+----------------+-------+------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_rel|registradorGenerico:REG_MIN_D ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_H_U ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; larguradados   ; 4     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_rel|registradorGenerico:REG_H_U ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fluxo:FD|registradorGenerico:REG_H_D ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; larguradados   ; 4     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_rel|registradorGenerico:REG_H_D ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_alarme|registradorGenerico:REG_SEC_U ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_alarme|registradorGenerico:REG_SEC_D ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_alarme|registradorGenerico:REG_MIN_U ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_alarme|registradorGenerico:REG_MIN_D ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_alarme|registradorGenerico:REG_H_U ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_alarme|registradorGenerico:REG_H_D ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_cronometro|registradorGenerico:REG_SEC_U ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_cronometro|registradorGenerico:REG_SEC_D ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_cronometro|registradorGenerico:REG_MIN_U ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_cronometro|registradorGenerico:REG_MIN_D ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_cronometro|registradorGenerico:REG_H_U ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo:FD_cronometro|registradorGenerico:REG_H_D ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -447,18 +711,48 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------+
 ; Parameter Name ; Value ; Type                                      ;
 +----------------+-------+-------------------------------------------+
-; divisor        ; 20    ; Signed Integer                            ;
+; divisor        ; 22    ; Signed Integer                            ;
 +----------------+-------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------+
-; Port Connectivity Checks: "ModoSM:modo" ;
-+-------+-------+----------+--------------+
-; Port  ; Type  ; Severity ; Details      ;
-+-------+-------+----------+--------------+
-; reset ; Input ; Info     ; Stuck at GND ;
-+-------+-------+----------+--------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico:freq3 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; divisor        ; 24    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "AlarmeSM:relogio_alarme" ;
++-------+-------+----------+--------------------------+
+; Port  ; Type  ; Severity ; Details                  ;
++-------+-------+----------+--------------------------+
+; reset ; Input ; Info     ; Stuck at GND             ;
++-------+-------+----------+--------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "ModoSM:ajuste_relogio" ;
++-------+-------+----------+------------------------+
+; Port  ; Type  ; Severity ; Details                ;
++-------+-------+----------+------------------------+
+; reset ; Input ; Info     ; Stuck at GND           ;
++-------+-------+----------+------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "AjusteSM:ajuste_alarme" ;
++-------+-------+----------+-------------------------+
+; Port  ; Type  ; Severity ; Details                 ;
++-------+-------+----------+-------------------------+
+; reset ; Input ; Info     ; Stuck at GND            ;
+; hu    ; Input ; Info     ; Stuck at GND            ;
+; hd    ; Input ; Info     ; Stuck at GND            ;
++-------+-------+----------+-------------------------+
 
 
 +---------------------------------------------+
@@ -467,7 +761,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port  ; Type  ; Severity ; Details          ;
 +-------+-------+----------+------------------+
 ; reset ; Input ; Info     ; Stuck at GND     ;
+; hu    ; Input ; Info     ; Stuck at GND     ;
+; hd    ; Input ; Info     ; Stuck at GND     ;
 +-------+-------+----------+------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "CronoSM:cronometro" ;
++-------+-------+----------+---------------------+
+; Port  ; Type  ; Severity ; Details             ;
++-------+-------+----------+---------------------+
+; reset ; Input ; Info     ; Stuck at GND        ;
++-------+-------+----------+---------------------+
 
 
 +-----------------------------------------+
@@ -476,6 +781,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port  ; Type  ; Severity ; Details      ;
 +-------+-------+----------+--------------+
 ; reset ; Input ; Info     ; Stuck at GND ;
+; su    ; Input ; Info     ; Stuck at GND ;
 +-------+-------+----------+--------------+
 
 
@@ -540,7 +846,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fluxo:FD|ULA:ULA"                                                                       ;
+; Port Connectivity Checks: "fluxo:FD_rel|ULA:ULA"                                                                   ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -557,22 +863,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 106                         ;
-; cycloneiii_ff         ; 67                          ;
-;     ENA               ; 24                          ;
-;     plain             ; 43                          ;
-; cycloneiii_lcell_comb ; 206                         ;
-;     arith             ; 43                          ;
-;         2 data inputs ; 41                          ;
-;         3 data inputs ; 2                           ;
-;     normal            ; 163                         ;
+; cycloneiii_ff         ; 135                         ;
+;     ENA               ; 72                          ;
+;     plain             ; 63                          ;
+; cycloneiii_lcell_comb ; 448                         ;
+;     arith             ; 68                          ;
+;         2 data inputs ; 65                          ;
+;         3 data inputs ; 3                           ;
+;     normal            ; 380                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 13                          ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 21                          ;
-;         4 data inputs ; 121                         ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 97                          ;
+;         4 data inputs ; 243                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 2.62                        ;
+; Average LUT depth     ; 3.06                        ;
 +-----------------------+-----------------------------+
 
 
@@ -581,7 +887,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -591,15 +897,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Oct  8 19:44:47 2017
+    Info: Processing started: Mon Oct  9 23:01:42 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Relogio -c Relogio
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file divisorFase.vhd
+    Info (12022): Found design unit 1: divisorFase-divisaoGenerica File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorFase.vhd Line: 12
+    Info (12023): Found entity 1: divisorFase File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/divisorFase.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file countador.vhd
+    Info (12022): Found design unit 1: countador-divisaoSegundo File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/countador.vhd Line: 16
+    Info (12023): Found entity 1: countador File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/countador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file CronoSM.vhd
+    Info (12022): Found design unit 1: CronoSM-BEHAVIOR File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/CronoSM.vhd Line: 34
+    Info (12023): Found entity 1: CronoSM File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/CronoSM.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file comparador.vhd
+    Info (12022): Found design unit 1: comparador-comparadorarc File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/comparador.vhd Line: 14
+    Info (12023): Found entity 1: comparador File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/comparador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file AlarmeSM.vhd
+    Info (12022): Found design unit 1: AlarmeSM-BEHAVIOR File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AlarmeSM.vhd Line: 34
+    Info (12023): Found entity 1: AlarmeSM File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AlarmeSM.vhd Line: 22
 Info (12021): Found 2 design units, including 1 entities, in source file ModoSM.vhd
     Info (12022): Found design unit 1: ModoSM-BEHAVIOR File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 42
     Info (12023): Found entity 1: ModoSM File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 22
 Info (12021): Found 2 design units, including 1 entities, in source file AjusteSM.vhd
-    Info (12022): Found design unit 1: AjusteSM-BEHAVIOR File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AjusteSM.vhd Line: 34
+    Info (12022): Found design unit 1: AjusteSM-BEHAVIOR File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AjusteSM.vhd Line: 36
     Info (12023): Found entity 1: AjusteSM File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AjusteSM.vhd Line: 22
 Info (12021): Found 2 design units, including 1 entities, in source file Relogio.vhd
     Info (12022): Found design unit 1: relogio-comportamento File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 20
@@ -614,7 +935,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file MUX6.vh
     Info (12022): Found design unit 1: MUX6-MUX_ARCH File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 18
     Info (12023): Found entity 1: MUX6 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file SM1.vhd
-    Info (12022): Found design unit 1: SM1-BEHAVIOR File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd Line: 33
+    Info (12022): Found design unit 1: SM1-BEHAVIOR File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd Line: 36
     Info (12023): Found entity 1: SM1 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/SM1.vhd Line: 22
 Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
     Info (12022): Found design unit 1: ULA-comportamento File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ULA.vhd Line: 14
@@ -632,34 +953,53 @@ Info (12021): Found 2 design units, including 1 entities, in source file bancoRe
 Info (12127): Elaborating entity "Relogio" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at Relogio.vhd(16): used implicit default value for signal "HEX6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 16
 Warning (10541): VHDL Signal Declaration warning at Relogio.vhd(16): used implicit default value for signal "HEX7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 16
-Warning (10036): Verilog HDL or VHDL warning at Relogio.vhd(25): object "auxReset" assigned a value but never read File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 25
-Info (12128): Elaborating entity "fluxo" for hierarchy "fluxo:FD" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 33
-Info (12128): Elaborating entity "MUX6" for hierarchy "fluxo:FD|MUX6:MUX6" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 40
+Warning (10036): Verilog HDL or VHDL warning at Relogio.vhd(27): object "auxReset" assigned a value but never read File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 27
+Info (12128): Elaborating entity "fluxo" for hierarchy "fluxo:FD_rel" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 46
+Info (12128): Elaborating entity "MUX6" for hierarchy "fluxo:FD_rel|MUX6:MUX6" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 40
 Info (10041): Inferred latch for "SAIDA[0]" at MUX6.vhd(20) File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
 Info (10041): Inferred latch for "SAIDA[1]" at MUX6.vhd(20) File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
 Info (10041): Inferred latch for "SAIDA[2]" at MUX6.vhd(20) File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
 Info (10041): Inferred latch for "SAIDA[3]" at MUX6.vhd(20) File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-Info (12128): Elaborating entity "ULA" for hierarchy "fluxo:FD|ULA:ULA" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 42
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "fluxo:FD|registradorGenerico:REG_SEC_U" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 44
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:display0" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 39
-Info (12128): Elaborating entity "SM1" for hierarchy "SM1:relogio" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 55
-Info (12128): Elaborating entity "AjusteSM" for hierarchy "AjusteSM:ajuste" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 62
-Info (12128): Elaborating entity "ModoSM" for hierarchy "ModoSM:modo" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 69
-Info (12129): Elaborating entity "divisorGenerico" using architecture "A:divisaogenerica" for hierarchy "divisorGenerico:freq" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 81
-Info (12129): Elaborating entity "divisorGenerico" using architecture "A:divisaogenerica" for hierarchy "divisorGenerico:freq2" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 84
+Info (12128): Elaborating entity "ULA" for hierarchy "fluxo:FD_rel|ULA:ULA" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 42
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "fluxo:FD_rel|registradorGenerico:REG_SEC_U" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/fluxo.vhd Line: 44
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:display0" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 64
+Info (12128): Elaborating entity "comparador" for hierarchy "comparador:comparador" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 78
+Info (12128): Elaborating entity "SM1" for hierarchy "SM1:relogio" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 84
+Info (12128): Elaborating entity "CronoSM" for hierarchy "CronoSM:cronometro" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 92
+Info (12128): Elaborating entity "AjusteSM" for hierarchy "AjusteSM:ajuste" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 99
+Info (12128): Elaborating entity "ModoSM" for hierarchy "ModoSM:ajuste_relogio" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 113
+Info (12128): Elaborating entity "AlarmeSM" for hierarchy "AlarmeSM:relogio_alarme" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 123
+Info (12129): Elaborating entity "divisorGenerico" using architecture "A:divisaogenerica" for hierarchy "divisorGenerico:freq" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 138
+Info (12129): Elaborating entity "divisorGenerico" using architecture "A:divisaogenerica" for hierarchy "divisorGenerico:freq2" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 141
+Info (12129): Elaborating entity "divisorGenerico" using architecture "A:divisaogenerica" for hierarchy "divisorGenerico:freq3" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 144
+Info (12128): Elaborating entity "divisorFase" for hierarchy "divisorFase:freq4" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 147
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer ModoSM:modo|clockOut~0 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 38
-Warning (13012): Latch fluxo:FD|MUX6:MUX6|SAIDA[2] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ModoSM:modo|fstate File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 44
-Warning (13012): Latch fluxo:FD|MUX6:MUX6|SAIDA[0] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ModoSM:modo|fstate File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 44
-Warning (13012): Latch fluxo:FD|MUX6:MUX6|SAIDA[1] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ModoSM:modo|fstate File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 44
-Warning (13012): Latch fluxo:FD|MUX6:MUX6|SAIDA[3] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ModoSM:modo|fstate File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 44
+    Warning (19017): Found clock multiplexer ModoSM:ajuste_relogio|clockOut~0 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 38
+Warning (13012): Latch fluxo:FD_rel|MUX6:MUX6|SAIDA[0] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ModoSM:ajuste_relogio|fstate File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 44
+Warning (13012): Latch fluxo:FD_rel|MUX6:MUX6|SAIDA[1] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ModoSM:ajuste_relogio|fstate File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 44
+Warning (13012): Latch fluxo:FD_rel|MUX6:MUX6|SAIDA[2] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ModoSM:ajuste_relogio|fstate File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 44
+Warning (13012): Latch fluxo:FD_rel|MUX6:MUX6|SAIDA[3] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ModoSM:ajuste_relogio|fstate File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/ModoSM.vhd Line: 44
+Warning (13012): Latch fluxo:FD_alarme|MUX6:MUX6|SAIDA[0] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AjusteSM:ajuste_alarme|WideOr6 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AjusteSM.vhd Line: 59
+Warning (13012): Latch fluxo:FD_alarme|MUX6:MUX6|SAIDA[2] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AjusteSM:ajuste_alarme|WideOr6 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AjusteSM.vhd Line: 59
+Warning (13012): Latch fluxo:FD_alarme|MUX6:MUX6|SAIDA[1] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AjusteSM:ajuste_alarme|fstate.state5 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AjusteSM.vhd Line: 38
+Warning (13012): Latch fluxo:FD_alarme|MUX6:MUX6|SAIDA[3] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AjusteSM:ajuste_alarme|fstate.state5 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/AjusteSM.vhd Line: 38
+Warning (13012): Latch fluxo:FD_cronometro|MUX6:MUX6|SAIDA[0] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CronoSM:cronometro|WideOr6 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/CronoSM.vhd Line: 57
+Warning (13012): Latch fluxo:FD_cronometro|MUX6:MUX6|SAIDA[1] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CronoSM:cronometro|fstate.state5 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/CronoSM.vhd Line: 36
+Warning (13012): Latch fluxo:FD_cronometro|MUX6:MUX6|SAIDA[3] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CronoSM:cronometro|fstate.state5 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/CronoSM.vhd Line: 36
+Warning (13012): Latch fluxo:FD_cronometro|MUX6:MUX6|SAIDA[2] has unsafe behavior File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/MUX6.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CronoSM:cronometro|WideOr6 File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/CronoSM.vhd Line: 57
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
     Warning (13410): Pin "LEDR[10]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
     Warning (13410): Pin "LEDR[11]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
     Warning (13410): Pin "LEDR[12]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
@@ -667,7 +1007,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[14]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
     Warning (13410): Pin "LEDR[15]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
     Warning (13410): Pin "LEDR[16]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
-    Warning (13410): Pin "LEDR[17]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 14
     Warning (13410): Pin "LEDG[4]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 15
     Warning (13410): Pin "LEDG[5]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 15
     Warning (13410): Pin "LEDG[6]" is stuck at GND File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 15
@@ -690,9 +1029,7 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[10]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
     Warning (15610): No output dependent on input pin "SW[11]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
     Warning (15610): No output dependent on input pin "SW[12]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
@@ -701,14 +1038,14 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[15]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
     Warning (15610): No output dependent on input pin "SW[16]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
     Warning (15610): No output dependent on input pin "SW[17]" File: /home/rmolines/Documents/GitHub/Rel-gio-VHDL/Relogio/Relogio.vhd Line: 10
-Info (21057): Implemented 302 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 557 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 83 output pins
-    Info (21061): Implemented 196 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 1000 megabytes
-    Info: Processing ended: Sun Oct  8 19:44:58 2017
+    Info (21061): Implemented 451 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
+    Info: Peak virtual memory: 1003 megabytes
+    Info: Processing ended: Mon Oct  9 23:01:53 2017
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:22
 
 
